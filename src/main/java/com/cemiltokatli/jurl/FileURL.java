@@ -115,7 +115,17 @@ public class FileURL extends URL {
      * @return FileURL object
      */
     public FileURL addPathSegment(String segment){
-        this.pathSegments.add(segment);
+        if(segment.contains("/")){
+            String[] pieces = segment.replaceFirst("^/", "").split("/");
+            for(String piece : pieces){
+                if(!piece.isEmpty()){
+                    this.pathSegments.add(piece.trim());
+                }
+            }
+        }
+        else
+            this.pathSegments.add(segment);
+
         return this;
     }
 
@@ -176,13 +186,25 @@ public class FileURL extends URL {
         }
 
         //Path
-        if(!pathSegments.isEmpty()){
+        if(!pathSegments.isEmpty()) {
+            String segment = "";
+            url.append("/");
 
-            for(String segment : pathSegments){
-                if(encode)
+            for (int i = 0; i < pathSegments.size(); i++) {
+                segment = pathSegments.get(i);
+
+                if (encode)
                     segment = encode(segment);
 
-                url.append("/").append(segment);
+                if (i > 0)
+                    url.append("/");
+
+                url.append(segment);
+            }
+
+            //# If the latest param is a directory, add a slash (/) at the end
+            if (!segment.contains(".")) {
+                url.append("/");
             }
         }
 
