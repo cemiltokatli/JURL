@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 /**
  * Represents a URL with http or https protocol.
- * An object of this call can only be instantiated by the JURL.build method.
+ * An object of this class can only be instantiated by the JURL.build method.
  */
 public class HttpURL extends URL {
     private String host;
