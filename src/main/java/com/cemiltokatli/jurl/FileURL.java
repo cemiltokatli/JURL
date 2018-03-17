@@ -143,10 +143,6 @@ public class FileURL extends URL {
         //Protocol
         url.append(super.getProtocol());
 
-        //Host
-        host = host.replaceFirst("^ftp://|ftps://|sftp://|file://","");
-        url.append(host);
-
         //Username
         if(username != null){
             if(encode)
@@ -167,6 +163,8 @@ public class FileURL extends URL {
         }
 
         //Host
+        host = host.replaceFirst("^ftp://|ftps://|sftp://|file://","");
+
         if(username != null){
             url.append("@");
         }
@@ -179,13 +177,12 @@ public class FileURL extends URL {
 
         //Path
         if(!pathSegments.isEmpty()){
-            url.append("/");
 
             for(String segment : pathSegments){
                 if(encode)
                     segment = encode(segment);
 
-                url.append(segment);
+                url.append("/").append(segment);
             }
         }
 
