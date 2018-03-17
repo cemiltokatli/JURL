@@ -10,11 +10,11 @@ package com.cemiltokatli.jurl;
 public class Protocol<T> {
     public static final Protocol<HttpURL> HTTP = new Protocol<>(HttpURL.class, "http://");
     public static final Protocol<HttpURL> HTTPS = new Protocol<>(HttpURL.class, "https://");
-    /*public static final Protocol<FileURL> FILE = new Protocol<>(FileURL.class, "file://");
+    public static final Protocol<FileURL> FILE = new Protocol<>(FileURL.class, "file://");
     public static final Protocol<FileURL> FTP = new Protocol<>(FileURL.class, "ftp://");
     public static final Protocol<FileURL> FTPS = new Protocol<>(FileURL.class, "ftps://");
     public static final Protocol<FileURL> SFTP = new Protocol<>(FileURL.class, "sftp://");
-    public static final Protocol<MailtoURL> MAILTO = new Protocol<>(MailtoURL.class, "mailto:");
+    /*public static final Protocol<MailtoURL> MAILTO = new Protocol<>(MailtoURL.class, "mailto:");
     public static final Protocol<TelnetURL> TELNET = new Protocol<>(TelnetURL.class, "telnet://");
     public static final Protocol<DataURL> DATA = new Protocol<>(DataURL.class, "data:");*/
 
