@@ -1,0 +1,47 @@
+{"data":[
+  {"protocol":"http://","host":"domain.com","port":-1,"shownWWW":false,"routeParameters":[],"queryFields":null,"fragment":null,
+    "structure":"http://domain.com/country/{country}/city/{city}", "routeParametersAliases":["country","USA","city","New-York"],
+    "builtURL":"http://domain.com/country/USA/city/New-York/","builtURLEncoded":"http://domain.com/country/USA/city/New-York/"},
+
+  {"protocol":"http://","host":"www.domain.com","port":-1,"shownWWW":true,"routeParameters":["index.html"],"queryFields":null,"fragment":null,
+    "structure":"http://www.domain.com/{route1}/{route2}/test", "routeParametersAliases":["route1","val1","route2","val2"],
+    "builtURL":"http://www.domain.com/val1/val2/test/index.html","builtURLEncoded":"http://www.domain.com/val1/val2/test/index.html"},
+
+  {"protocol":"https://","host":"www.domain.org","port":-1,"shownWWW":true,"routeParameters":[],"queryFields":["lang","en","foo","bar","id","100"],"fragment":"test.test",
+    "structure":"https://www.domain.org/{foo}/{bar}", "routeParametersAliases":["foo","test","bar","test2"],
+    "builtURL":"https://www.domain.org/test/test2/?lang=en&foo=bar&id=100#test.test","builtURLEncoded":"https://www.domain.org/test/test2/?lang=en&foo=bar&id=100#test.test"},
+
+  {"protocol":"https://","host":"mydomain.net.tr","port":-1,"shownWWW":false,"routeParameters":["my test route1","route test 2","test file.php","test file-2.php"],"queryFields":["foo","bar"],"fragment":null,
+    "structure":"https://mydomain.net.tr", "routeParametersAliases":[],
+    "builtURL":"https://mydomain.net.tr/my test route1/route test 2/test file.php/test file-2.php?foo=bar","builtURLEncoded":"https://mydomain.net.tr/my%20test%20route1/route%20test%202/test%20file.php/test%20file-2.php?foo=bar"},
+
+  {"protocol":"http://","host":"www.mydomain.com","port":-1,"shownWWW":true,"routeParameters":["java","foo","bar","index.jsf"],"queryFields":null,"fragment":"my-test",
+    "structure":"http://www.mydomain.com/software/programing", "routeParametersAliases":[],
+    "builtURL":"http://www.mydomain.com/software/programing/java/foo/bar/index.jsf#my-test","builtURLEncoded":"http://www.mydomain.com/software/programing/java/foo/bar/index.jsf#my-test"},
+
+  {"protocol":"http://","host":"www.mydomain.io","port":-1,"shownWWW":true,"routeParameters":["software","programing","java","foo","bar","index.jsf"],"queryFields":["foo","bar","id","200"],"fragment":"my-test",
+    "structure":"http://www.mydomain.io/", "routeParametersAliases":[],
+    "builtURL":"http://www.mydomain.io/software/programing/java/foo/bar/index.jsf?foo=bar&id=200#my-test","builtURLEncoded":"http://www.mydomain.io/software/programing/java/foo/bar/index.jsf?foo=bar&id=200#my-test"},
+
+  {"protocol":"http://","host":"100.200.300.400","port":7000,"shownWWW":false,"routeParameters":["b","c","d","index.asp"],"queryFields":["test","100"],"fragment":null,
+    "structure":"http://100.200.300.400:7000/{xx}?test=100", "routeParametersAliases":["xx","a"],
+    "builtURL":"http://100.200.300.400:7000/a/b/c/d/index.asp?test=100","builtURLEncoded":"http://100.200.300.400:7000/a/b/c/d/index.asp?test=100"},
+
+  {"protocol":"https://","host":"www.mydomain.com.tr","port":-1,"shownWWW":true,"routeParameters":["b 1","b 2","b 3"],"queryFields":["id","100"],"fragment":"anchor test",
+    "structure":"www.mydomain.com.tr/{z1}/{z2}/{z3}/{z4}?foo=bar", "routeParametersAliases":["z1","a1","z2","a2","z3","a3","z4","a4"],
+    "builtURL":"https://www.mydomain.com.tr/a1/a2/a3/a4/b 1/b 2/b 3/?foo=bar&id=100#anchor test","builtURLEncoded":"https://www.mydomain.com.tr/a1/a2/a3/a4/b%201/b%202/b%203/?foo=bar&id=100#anchor%20test"},
+
+  {"protocol":"http://","host":"10.20.30.40","port":999,"shownWWW":false,"routeParameters":[],"queryFields":["p","1"],"fragment":null,
+    "structure":"10.20.30.40:999/foo/bar/{test}/index.html?id=100", "routeParametersAliases":["test","java"],
+    "builtURL":"http://10.20.30.40:999/foo/bar/java/index.html?id=100&p=1","builtURLEncoded":"http://10.20.30.40:999/foo/bar/java/index.html?id=100&p=1"},
+
+  {"protocol":"https://","host":"www.mydomain.co","port":-1,"shownWWW":true,"routeParameters":["java","index.php"],"queryFields":["foo","bar","page","2"],"fragment":"my-test",
+    "structure":"www.mydomain.co/{a}/{b}/", "routeParametersAliases":["a","foo","b","bar"],
+    "builtURL":"https://www.mydomain.co/foo/bar/java/index.php?foo=bar&page=2#my-test","builtURLEncoded":"https://www.mydomain.co/foo/bar/java/index.php?foo=bar&page=2#my-test"},
+
+  {"protocol":"https://","host":"mydomain.com","port":-1,"shownWWW":false,"routeParameters":["f","z","t"],"queryFields":["id","100"],"fragment":null,
+    "structure":"mydomain.com/a/b/c/{lang}/{test}?foo=bar#test", "routeParametersAliases":["lang","l1","test","t1"],
+    "builtURL":"https://mydomain.com/a/b/c/l1/t1/f/z/t/?foo=bar&id=100#test","builtURLEncoded":"https://mydomain.com/a/b/c/l1/t1/f/z/t/?foo=bar&id=100#test"}
+  ]
+}
+
