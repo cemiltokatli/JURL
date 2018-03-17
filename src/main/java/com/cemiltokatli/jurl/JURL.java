@@ -22,6 +22,9 @@ abstract public class JURL {
         if(protocol.getType() == HttpURL.class){
             return (T)new HttpURL(protocol.getProtocol());
         }
+        else if(protocol.getType() == FileURL.class){
+            return (T)new FileURL(protocol.getProtocol());
+        }
 
         return (T)new HttpURL(protocol.getProtocol());
     }
