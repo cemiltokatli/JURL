@@ -296,6 +296,8 @@ public class HttpURL extends URL {
         url.append(super.getProtocol());
 
         //Host
+        host = host.replaceFirst("^https://|http://","");
+
         if(shownWWW)
             url.append("www.");
 
