@@ -3,7 +3,7 @@ package com.cemiltokatli.jurl;
 /**
  * The library is usually controlled via this class.
  * The "build" method of this class is the first step to start building a URL.
- * It returns a new URL object depends on the given protocol.
+ * It returns a new URL object according to the given protocol.
  */
 abstract public class JURL {
     /**
