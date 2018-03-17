@@ -3,8 +3,6 @@ package com.cemiltokatli.jurl;
 import com.cemiltokatli.jurl.exception.HttpURLParseError;
 import com.cemiltokatli.jurl.exception.MalformedHttpURLException;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -131,7 +129,17 @@ public class HttpURL extends URL {
      * @return HttpURL object
      */
     public HttpURL addRouteParam(String param){
-        this.routeParameters.add(param);
+        if(param.contains("/")){
+            String[] pieces = param.replaceFirst("^/", "").split("/");
+            for(String piece : pieces){
+                if(!piece.isEmpty()){
+                    this.routeParameters.add(piece.trim());
+                }
+            }
+        }
+        else
+            this.routeParameters.add(param);
+
         return this;
     }
 
