@@ -53,7 +53,18 @@
 
   {"protocol":"http://","host":"http://bar.com","port":-1,"shownWWW":false,"routeParameters":["java.jsp"],"queryFields":["lang","en","id","100"],"fragment":null,
     "structure":"bar.com/{test}/foo/bar#test","routeParametersAliases":["test","mytest"],
-    "builtURL":"http://bar.com/mytest/foo/bar/java.jsp?lang=en&id=100#test","builtURLEncoded":"http://bar.com/mytest/foo/bar/java.jsp?lang=en&id=100#test"}
+    "builtURL":"http://bar.com/mytest/foo/bar/java.jsp?lang=en&id=100#test","builtURLEncoded":"http://bar.com/mytest/foo/bar/java.jsp?lang=en&id=100#test"},
+
+  {"protocol":"https://","host":"https://foo.bar.com","port":1000,"shownWWW":false,"routeParameters":["default.jsp"],"queryFields":["page","1"],"fragment":null,
+    "structure":"foo.bar.com/{foo}/{bar}/{foo2}/{bar2}/java/?id=1&lang=en","routeParametersAliases":["foo","java-foo","bar","java-bar","foo2","java-foo2","bar2","java-bar2"],
+    "builtURL":"https://foo.bar.com:1000/java-foo/java-bar/java-foo2/java-bar2/java/default.jsp?id=1&lang=en&page=1","builtURLEncoded":"https://foo.bar.com:1000/java-foo/java-bar/java-foo2/java-bar2/java/default.jsp?id=1&lang=en&page=1"},
+
+  {"protocol":"http://","host":"http://www.foo.org","port":-1,"shownWWW":true,"routeParameters":[],"queryFields":["lang","en"],"fragment":null,
+    "structure":"http://www.foo.org/home.asp?foo=bar&id=1#test","routeParametersAliases":[],
+    "builtURL":"http://www.foo.org/home.asp?foo=bar&id=1&lang=en#test","builtURLEncoded":"http://www.foo.org/home.asp?foo=bar&id=1&lang=en#test"}
+
+
+
   ]
 }
 

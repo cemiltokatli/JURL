@@ -166,7 +166,7 @@ public class HttpURLTest {
                 testURL.setPort(url.port);
 
             if(url.shownWWW)
-                testURL.showWWW(url.shownWWW);
+                testURL.showWWW(true);
 
             for (int i = 1; i < url.routeParametersAliases.size(); i+=2){
                 testURL.setRouteParam(url.routeParametersAliases.get(i-1), url.routeParametersAliases.get(i));
