@@ -41,7 +41,19 @@
 
   {"protocol":"https://","host":"mydomain.com","port":-1,"shownWWW":false,"routeParameters":["f","z","t"],"queryFields":["id","100"],"fragment":null,
     "structure":"mydomain.com/a/b/c/{lang}/{test}?foo=bar#test", "routeParametersAliases":["lang","l1","test","t1"],
-    "builtURL":"https://mydomain.com/a/b/c/l1/t1/f/z/t/?foo=bar&id=100#test","builtURLEncoded":"https://mydomain.com/a/b/c/l1/t1/f/z/t/?foo=bar&id=100#test"}
+    "builtURL":"https://mydomain.com/a/b/c/l1/t1/f/z/t/?foo=bar&id=100#test","builtURLEncoded":"https://mydomain.com/a/b/c/l1/t1/f/z/t/?foo=bar&id=100#test"},
+
+  {"protocol":"https://","host":"https://www.mydomain.com.tr","port":-1,"shownWWW":false,"routeParameters":["index.jsp"],"queryFields":["foo","bar","id","2"],"fragment":null,
+    "structure":"https://www.mydomain.com.tr/folder1/{route}/folder3#foo", "routeParametersAliases":["route","folder2"],
+    "builtURL":"https://www.mydomain.com.tr/folder1/folder2/folder3/index.jsp?foo=bar&id=2#foo","builtURLEncoded":"https://www.mydomain.com.tr/folder1/folder2/folder3/index.jsp?foo=bar&id=2#foo"},
+
+  {"protocol":"https://","host":"https://www.foo.com","port":-1,"shownWWW":true,"routeParameters":["index.php"],"queryFields":null,"fragment":null,
+    "structure":"www.foo.com/{test}/foo/bar?lang=en&id=100","routeParametersAliases":["test","java"],
+    "builtURL":"https://www.foo.com/java/foo/bar/index.php?lang=en&id=100","builtURLEncoded":"https://www.foo.com/java/foo/bar/index.php?lang=en&id=100"},
+
+  {"protocol":"http://","host":"http://bar.com","port":-1,"shownWWW":false,"routeParameters":["java.jsp"],"queryFields":["lang","en","id","100"],"fragment":null,
+    "structure":"bar.com/{test}/foo/bar#test","routeParametersAliases":["test","mytest"],
+    "builtURL":"http://bar.com/mytest/foo/bar/java.jsp?lang=en&id=100#test","builtURLEncoded":"http://bar.com/mytest/foo/bar/java.jsp?lang=en&id=100#test"}
   ]
 }
 

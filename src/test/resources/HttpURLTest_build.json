@@ -99,5 +99,23 @@
     "builtURL":"http://www.mydomain.co.uk/!foo bar / java is nice/junit-is-nice/(Programing)/\"Java\"/[test]/","builtURLEncoded":"http://www.mydomain.co.uk/!foo%20bar%20/%20java%20is%20nice/junit-is-nice/(Programing)/%22Java%22/[test]/"},
 
   {"protocol":"https://","host":"mydomain.net.tr","port":-1,"shownWWW":false,"routeParameters":["my test route1","route test 2","test file.php","test file-2.php"],"queryFields":["foo","bar"],"fragment":null,
-    "builtURL":"https://mydomain.net.tr/my test route1/route test 2/test file.php/test file-2.php?foo=bar","builtURLEncoded":"https://mydomain.net.tr/my%20test%20route1/route%20test%202/test%20file.php/test%20file-2.php?foo=bar"}
+    "builtURL":"https://mydomain.net.tr/my test route1/route test 2/test file.php/test file-2.php?foo=bar","builtURLEncoded":"https://mydomain.net.tr/my%20test%20route1/route%20test%202/test%20file.php/test%20file-2.php?foo=bar"},
+
+  {"protocol":"https://","host":"testdomain.com.tr","port":-1,"shownWWW":false,"routeParameters":["a","b","c","d","e","f","g","h","index.php"],"queryFields":["foo","bar","page","1","id","10","ref","java"],"fragment":null,
+    "builtURL":"https://testdomain.com.tr/a/b/c/d/e/f/g/h/index.php?foo=bar&page=1&id=10&ref=java","builtURLEncoded":"https://testdomain.com.tr/a/b/c/d/e/f/g/h/index.php?foo=bar&page=1&id=10&ref=java"},
+
+  {"protocol":"http://","host":"12.10.222.32","port":22,"shownWWW":false,"routeParameters":["a","b","c","default.asp"],"queryFields":["a","b"],"fragment":"foo.bar",
+    "builtURL":"http://12.10.222.32:22/a/b/c/default.asp?a=b#foo.bar","builtURLEncoded":"http://12.10.222.32:22/a/b/c/default.asp?a=b#foo.bar"},
+
+  {"protocol":"http://","host":"22.13.444.32","port":-1,"shownWWW":false,"routeParameters":[],"queryFields":null,"fragment":"foo.bar",
+    "builtURL":"http://22.13.444.32/#foo.bar","builtURLEncoded":"http://22.13.444.32/#foo.bar"},
+
+  {"protocol":"https://","host":"https://www.test.com.tr","port":-1,"shownWWW":true,"routeParameters":["foo","bar","java"],"queryFields":null,"fragment":"java is nice",
+    "builtURL":"https://www.test.com.tr/foo/bar/java/#java is nice","builtURLEncoded":"https://www.test.com.tr/foo/bar/java/#java%20is%20nice"},
+
+  {"protocol":"http://","host":"http://100.200.300.400","port":-1,"shownWWW":false,"routeParameters":["test"],"queryFields":["java","true"],"fragment":null,
+    "builtURL":"http://100.200.300.400/test/?java=true","builtURLEncoded":"http://100.200.300.400/test/?java=true"},
+
+  {"protocol":"https://","host":"https://www.foo.com","port":-1,"shownWWW":true,"routeParameters":["index.php"],"queryFields":null,"fragment":null,
+    "builtURL":"https://www.foo.com/index.php","builtURLEncoded":"https://www.foo.com/index.php"}
 ]}

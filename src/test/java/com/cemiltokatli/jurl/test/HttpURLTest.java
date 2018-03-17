@@ -32,7 +32,7 @@ public class HttpURLTest {
     }
 
     /**
-     * Reads the test data from the given file and fills the given source array
+     * Reads the test data from the given file and assign it to the given source array
      *
      * @param fileName
      * @param source
