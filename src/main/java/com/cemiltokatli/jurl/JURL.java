@@ -28,6 +28,9 @@ abstract public class JURL {
         else if(protocol.getType() == DataURL.class){
             return (T)new DataURL(protocol.getProtocol());
         }
+        else if(protocol.getType() == TelnetURL.class){
+            return (T)new TelnetURL(protocol.getProtocol());
+        }
 
         return (T)new HttpURL(protocol.getProtocol());
     }

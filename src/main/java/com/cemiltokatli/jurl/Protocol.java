@@ -15,8 +15,8 @@ public class Protocol<T> {
     public static final Protocol<FileURL> FTPS = new Protocol<>(FileURL.class, "ftps://");
     public static final Protocol<FileURL> SFTP = new Protocol<>(FileURL.class, "sftp://");
     public static final Protocol<DataURL> DATA = new Protocol<>(DataURL.class, "data:");
-    /*public static final Protocol<MailtoURL> MAILTO = new Protocol<>(MailtoURL.class, "mailto:");
     public static final Protocol<TelnetURL> TELNET = new Protocol<>(TelnetURL.class, "telnet://");
+    /*public static final Protocol<MailtoURL> MAILTO = new Protocol<>(MailtoURL.class, "mailto:");
     */
 
     private Class<T> type;
