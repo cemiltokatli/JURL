@@ -155,30 +155,34 @@ public class FileURL extends URL {
 
         //Username
         if(username != null){
-            if(encode)
-                username = encode(username);
+            String usernamePrepared = username;
 
-            url.append(username);
+            if(encode)
+                usernamePrepared = encode(usernamePrepared);
+
+            url.append(usernamePrepared);
         }
 
         //Password
         if(password != null){
+            String passwordPrepared = password;
+
             if(username != null)
                 url.append(":");
 
             if(encode)
-                password = encode(password);
+                passwordPrepared = encode(passwordPrepared);
 
-            url.append(password);
+            url.append(passwordPrepared);
         }
 
         //Host
-        host = host.replaceFirst("^ftp://|ftps://|sftp://|file://|ftp:|ftps:|file:|sftp:","");
+        String hostPrepared = host.replaceFirst("^ftp://|ftps://|sftp://|file://|ftp:|ftps:|file:|sftp:","");
 
         if(username != null){
             url.append("@");
         }
-        url.append(host);
+        url.append(hostPrepared);
 
         //Port
         if(port > -1){
