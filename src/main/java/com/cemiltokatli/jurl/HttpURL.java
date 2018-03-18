@@ -304,15 +304,15 @@ public class HttpURL extends URL {
         url.append(super.getProtocol());
 
         //Host
-        host = host.replaceFirst("^https://|http://|https:|http:","");
+        String hostPrepared = host.replaceFirst("^https://|http://|https:|http:","");
 
         if(shownWWW)
             url.append("www.");
 
-        if(shownWWW && host.split("\\.").length >= 3 && host.startsWith("www"))
-            host = host.replaceFirst("www\\.","");
+        if(shownWWW && hostPrepared.split("\\.").length >= 3 && hostPrepared.startsWith("www"))
+            hostPrepared = hostPrepared.replaceFirst("www\\.","");
 
-        url.append(host);
+        url.append(hostPrepared);
 
         //Port
         if(port > -1){
@@ -375,13 +375,15 @@ public class HttpURL extends URL {
 
         //Fragment
         if(fragment != null) {
+            String fragmentPrepared = fragment;
+
             if(encode)
-                fragment = encode(fragment);
+                fragmentPrepared = encode(fragmentPrepared);
 
             if(addSlash)
                 url.append("/");
 
-            url.append("#").append(fragment);
+            url.append("#").append(fragmentPrepared);
         }
 
         return url.toString();
