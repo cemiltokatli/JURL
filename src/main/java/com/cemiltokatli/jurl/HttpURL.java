@@ -94,7 +94,7 @@ public class HttpURL extends URL {
      */
     public HttpURL setHost(String host){
         if(host != null){
-            this.host = host;
+            this.host = host.replaceAll("/","");
         }
 
         return this;
