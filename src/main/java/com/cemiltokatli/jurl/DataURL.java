@@ -1,5 +1,7 @@
 package com.cemiltokatli.jurl;
 
+import java.util.Base64;
+
 /**
  * Represents a data URL.
  * An object of this class can only be instantiated by the JURL.build method.
@@ -105,7 +107,15 @@ public class DataURL extends URL {
         }
 
         //Data
-        url.append(",").append(data);
+        String dataPrepared = data;
+
+        if(base64)
+            dataPrepared = Base64.getEncoder().encodeToString(dataPrepared.getBytes());
+
+        if(encode && !base64)
+            dataPrepared = encode(dataPrepared);
+
+        url.append(",").append(dataPrepared);
 
         return url.toString();
     }
