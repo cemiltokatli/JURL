@@ -173,7 +173,7 @@ public class FileURL extends URL {
         }
 
         //Host
-        host = host.replaceFirst("^ftp://|ftps://|sftp://|file://","");
+        host = host.replaceFirst("^ftp://|ftps://|sftp://|file://|ftp:|ftps:|file:|sftp:","");
 
         if(username != null){
             url.append("@");
