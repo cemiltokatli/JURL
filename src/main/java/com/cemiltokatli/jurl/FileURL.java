@@ -92,7 +92,7 @@ public class FileURL extends URL {
      */
     public FileURL setHost(String host) {
         if(host != null){
-            this.host = host;
+            this.host = host.replaceAll("/","");
         }
         return this;
     }
