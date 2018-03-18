@@ -92,7 +92,7 @@ public class DataURLTest {
                 testURL.setMediaType(url.mediaType);
 
             if(url.base64)
-                testURL.setBase64(url.base64);
+                testURL.setBase64(true);
 
             testURL.setData(url.data);
 
