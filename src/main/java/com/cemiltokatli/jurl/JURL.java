@@ -31,7 +31,8 @@ abstract public class JURL {
         else if(protocol.getType() == TelnetURL.class){
             return (T)new TelnetURL(protocol.getProtocol());
         }
-
-        return (T)new HttpURL(protocol.getProtocol());
+        else{
+            return (T)new MailtoURL(protocol.getProtocol());
+        }
     }
 }
