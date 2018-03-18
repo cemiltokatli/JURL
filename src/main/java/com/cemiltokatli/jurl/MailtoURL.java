@@ -96,8 +96,12 @@ public class MailtoURL extends URL {
         url.append(emailAddress);
 
         //Subject
-        if(subject != null)
+        if(subject != null) {
+            if(encode)
+                subject = encode(subject);
+
             url.append("?subject=").append(subject);
+        }
 
         //Content
         if(content != null) {
@@ -105,6 +109,9 @@ public class MailtoURL extends URL {
                 url.append("&");
             else
                 url.append("?");
+
+            if(encode)
+                content = encode(content);
 
             url.append("body=").append(content);
         }
