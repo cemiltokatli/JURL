@@ -142,4 +142,36 @@ public class TelnetURL extends URL {
 
         return url.toString();
     }
+
+    /**
+     * Builds the URL and returns it as a String.
+     *
+     * @return The built URL
+     */
+    @Override
+    public String toString(){
+        return toString(false);
+    }
+
+    /**
+     * Builds the URL and returns it as a java.net.URL object.
+     * If the encode argument is true, it also encodes the URL.
+     *
+     * @param encode Encoding type
+     * @return The built URL
+     * @throws java.net.MalformedURLException
+     */
+    public java.net.URL toURL(boolean encode) throws java.net.MalformedURLException{
+        return new java.net.URL(toString(encode));
+    }
+
+    /**
+     * Builds the URL and returns it as a java.net.URL object.
+     *
+     * @return The build URL
+     * @throws java.net.MalformedURLException
+     */
+    public java.net.URL toURL() throws java.net.MalformedURLException{
+        return new java.net.URL(toString(false));
+    }
 }
