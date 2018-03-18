@@ -304,7 +304,7 @@ public class HttpURL extends URL {
         url.append(super.getProtocol());
 
         //Host
-        host = host.replaceFirst("^https://|http://","");
+        host = host.replaceFirst("^https://|http://|https:|http:","");
 
         if(shownWWW)
             url.append("www.");
