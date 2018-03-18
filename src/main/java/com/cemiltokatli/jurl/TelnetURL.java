@@ -126,13 +126,10 @@ public class TelnetURL extends URL {
         //Password
         String passwordPrepared = password;
 
-        if(username != null)
-            url.append(":");
-
         if(encode)
             passwordPrepared = encode(passwordPrepared);
 
-        url.append(passwordPrepared);
+        url.append(":").append(passwordPrepared);
 
         //Host
         String hostPrepared = host.replaceFirst("^telnet://|telnet:","");
