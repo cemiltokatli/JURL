@@ -1,5 +1,7 @@
 package com.cemiltokatli.jurl;
 
+import com.cemiltokatli.jurl.exception.URLBuildException;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -152,6 +154,10 @@ public class FileURL extends URL {
 
         //Protocol
         url.append(super.getProtocol());
+
+        //# Throw an error if the host name is null or empty
+        if(host == null || host.isEmpty())
+            throw new URLBuildException("Host name is null or empty. A host name must be set to build a file url.");
 
         //Username
         if(username != null){
