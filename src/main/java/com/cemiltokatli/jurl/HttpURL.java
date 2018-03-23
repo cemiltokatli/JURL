@@ -2,6 +2,7 @@ package com.cemiltokatli.jurl;
 
 import com.cemiltokatli.jurl.exception.HttpURLParseError;
 import com.cemiltokatli.jurl.exception.MalformedHttpURLException;
+import com.cemiltokatli.jurl.exception.URLBuildException;
 
 import java.util.*;
 import java.util.regex.Matcher;
@@ -304,6 +305,9 @@ public class HttpURL extends URL {
         url.append(super.getProtocol());
 
         //Host
+        if(host == null || host.isEmpty())
+            throw new URLBuildException("Host name is null or empty. A host name must be set to build a http or https url.");
+
         String hostPrepared = host.replaceFirst("^https://|http://|https:|http:","");
 
         if(shownWWW)
