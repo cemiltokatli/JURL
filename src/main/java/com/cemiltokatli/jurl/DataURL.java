@@ -1,5 +1,7 @@
 package com.cemiltokatli.jurl;
 
+import com.cemiltokatli.jurl.exception.URLBuildException;
+
 import java.util.Base64;
 
 /**
@@ -107,6 +109,10 @@ public class DataURL extends URL {
         }
 
         //Data
+            //# Throw an error if the data is null or empty
+            if(data == null || data.isEmpty())
+                throw new URLBuildException("Data is null or empty. Data must be set to build a data url.");
+
         String dataPrepared = data;
 
         if(base64)
@@ -128,27 +134,5 @@ public class DataURL extends URL {
     @Override
     public String toString(){
         return toString(false);
-    }
-
-    /**
-     * Builds the URL and returns it as a java.net.URL object.
-     * If the encode argument is true, it also encodes the URL.
-     *
-     * @param encode Encoding type
-     * @return The built URL
-     * @throws java.net.MalformedURLException
-     */
-    public java.net.URL toURL(boolean encode) throws java.net.MalformedURLException{
-        return new java.net.URL(toString(encode));
-    }
-
-    /**
-     * Builds the URL and returns it as a java.net.URL object.
-     *
-     * @return The build URL
-     * @throws java.net.MalformedURLException
-     */
-    public java.net.URL toURL() throws java.net.MalformedURLException{
-        return new java.net.URL(toString(false));
     }
 }
