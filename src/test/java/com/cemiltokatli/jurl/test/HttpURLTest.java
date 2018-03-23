@@ -157,7 +157,7 @@ public class HttpURLTest {
     @DisplayName("Test URL Parsing and Building")
     public void testURLBuildWithParse() throws MalformedHttpURLException{
         for(URL url : testURLBuildParseData){
-            HttpURL testURL = JURL.build(url.protocol).fromString(url.structure);
+            HttpURL testURL = JURL.build(url.protocol).setString(url.structure);
 
             if(url.port > -1)
                 testURL.setPort(url.port);

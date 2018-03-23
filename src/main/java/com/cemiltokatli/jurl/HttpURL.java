@@ -225,7 +225,7 @@ public class HttpURL extends URL {
      * @throws MalformedHttpURLException
      * @throws HttpURLParseError
      */
-    public HttpURL fromString(String url) throws MalformedHttpURLException, HttpURLParseError{
+    public HttpURL setString(String url) throws MalformedHttpURLException, HttpURLParseError{
         //Check if the building of the URL has been started before this method is called
         if(host != null || port >= 0 || routeParameters.size() > 0 || queryFields.size() > 0 || fragment != null || urlString != null){
             throw new HttpURLParseError("URL cannot be parsed if it is already being built");
