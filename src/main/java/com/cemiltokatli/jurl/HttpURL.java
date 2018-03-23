@@ -305,8 +305,9 @@ public class HttpURL extends URL {
         url.append(super.getProtocol());
 
         //Host
-        if(host == null || host.isEmpty())
-            throw new URLBuildException("Host name is null or empty. A host name must be set to build a http or https url.");
+            //# Throw an error if the host name is null or empty
+            if(host == null || host.isEmpty())
+                throw new URLBuildException("Host name is null or empty. A host name must be set to build a http or https url.");
 
         String hostPrepared = host.replaceFirst("^https://|http://|https:|http:","");
 
