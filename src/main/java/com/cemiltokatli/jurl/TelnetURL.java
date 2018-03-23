@@ -1,5 +1,7 @@
 package com.cemiltokatli.jurl;
 
+import com.cemiltokatli.jurl.exception.URLBuildException;
+
 /**
  * Represents a telnet URL.
  * An object of this class can only be instantiated by the JURL.build method.
@@ -17,6 +19,7 @@ public class TelnetURL extends URL {
      */
     TelnetURL(String protocol){
         super(protocol);
+        this.port = -1;
     }
 
     /**
@@ -114,26 +117,40 @@ public class TelnetURL extends URL {
         //Protocol
         url.append(super.getProtocol());
 
+        //# Throw an error if the host name is null or empty
+        if(host == null || host.isEmpty())
+            throw new URLBuildException("Host name is null or empty. A host name must be set to build a telnet url.");
+
         //Username
-        String usernamePrepared = username;
+        if(username != null){
+            String usernamePrepared = username;
 
-        if(encode)
-            usernamePrepared = encode(usernamePrepared);
+            if(encode)
+                usernamePrepared = encode(usernamePrepared);
 
-        url.append(usernamePrepared);
-
+            url.append(usernamePrepared);
+        }
 
         //Password
-        String passwordPrepared = password;
+        if(password != null){
+            String passwordPrepared = password;
 
-        if(encode)
-            passwordPrepared = encode(passwordPrepared);
+            if(username != null)
+                url.append(":");
 
-        url.append(":").append(passwordPrepared);
+            if(encode)
+                passwordPrepared = encode(passwordPrepared);
+
+            url.append(passwordPrepared);
+        }
 
         //Host
         String hostPrepared = host.replaceFirst("^telnet://|telnet:","");
-        url.append("@").append(hostPrepared);
+
+        if(username != null){
+            url.append("@");
+        }
+        url.append(hostPrepared);
 
         //Port
         if(port > -1){
@@ -151,27 +168,5 @@ public class TelnetURL extends URL {
     @Override
     public String toString(){
         return toString(false);
-    }
-
-    /**
-     * Builds the URL and returns it as a java.net.URL object.
-     * If the encode argument is true, it also encodes the URL.
-     *
-     * @param encode Encoding type
-     * @return The built URL
-     * @throws java.net.MalformedURLException
-     */
-    public java.net.URL toURL(boolean encode) throws java.net.MalformedURLException{
-        return new java.net.URL(toString(encode));
-    }
-
-    /**
-     * Builds the URL and returns it as a java.net.URL object.
-     *
-     * @return The build URL
-     * @throws java.net.MalformedURLException
-     */
-    public java.net.URL toURL() throws java.net.MalformedURLException{
-        return new java.net.URL(toString(false));
     }
 }
