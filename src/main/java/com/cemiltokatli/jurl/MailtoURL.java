@@ -1,5 +1,7 @@
 package com.cemiltokatli.jurl;
 
+import com.cemiltokatli.jurl.exception.URLBuildException;
+
 /**
  * Represents a mail-to URL.
  * An object of this class can only be instantiated by the JURL.build method.
@@ -93,6 +95,11 @@ public class MailtoURL extends URL {
         url.append(super.getProtocol());
 
         //E-Mail address
+            //# Throw an error if the e-mail address is null or empty
+            if(emailAddress == null || emailAddress.isEmpty()){
+                throw new URLBuildException("E-mail address is null or empty. An e-mail address must be set to build a mail-to url.");
+            }
+
         url.append(emailAddress);
 
         //Subject
@@ -127,27 +134,5 @@ public class MailtoURL extends URL {
     @Override
     public String toString(){
         return toString(false);
-    }
-
-    /**
-     * Builds the URL and returns it as a java.net.URL object.
-     * If the encode argument is true, it also encodes the URL.
-     *
-     * @param encode Encoding type
-     * @return The built URL
-     * @throws java.net.MalformedURLException
-     */
-    public java.net.URL toURL(boolean encode) throws java.net.MalformedURLException{
-        return new java.net.URL(toString(encode));
-    }
-
-    /**
-     * Builds the URL and returns it as a java.net.URL object.
-     *
-     * @return The build URL
-     * @throws java.net.MalformedURLException
-     */
-    public java.net.URL toURL() throws java.net.MalformedURLException{
-        return new java.net.URL(toString(false));
     }
 }
