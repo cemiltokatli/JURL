@@ -6,7 +6,7 @@ package com.cemiltokatli.jurl.exception;
  */
 public class URLBuildException extends RuntimeException {
     /**
-     * Creates a new URLBuildException with the specified detail message.
+     * Creates a new URLBuildException object with the specified detail message.
      *
      * @param message   the detail message
      */

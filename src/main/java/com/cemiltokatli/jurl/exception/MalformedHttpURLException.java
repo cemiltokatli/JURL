@@ -6,7 +6,7 @@ package com.cemiltokatli.jurl.exception;
  */
 public class MalformedHttpURLException extends Exception {
     /**
-     * Creates a new MalformedHttpURLException with the specified detail message.
+     * Creates a new MalformedHttpURLException object with the specified detail message.
      *
      * @param message   the detail message
      */
