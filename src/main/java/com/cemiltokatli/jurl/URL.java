@@ -30,7 +30,7 @@ abstract class URL {
     }
 
     /**
-     * Encodes the given value with UTF-8 and returns it
+     * Encodes the given value with UTF-8 and returns it.
      *
      * @param value
      * @return Encoded value
@@ -40,7 +40,7 @@ abstract class URL {
     }
 
     /**
-     * Encodes the given value with UTF-8 and returns it
+     * Encodes the given value with UTF-8 and returns it.
      * If the forHttp parameter is true, this method produces exactly the same result with the
      * javascript's encodeURIComponent function.
      *
