@@ -88,7 +88,6 @@ public class FileURLTest {
 
                 //Excepted
                 url.builtURL = item.getString("builtURL");
-                url.builtURLEncoded = item.getString("builtURLEncoded");
 
                 source.add(url);
             }
@@ -116,7 +115,6 @@ public class FileURLTest {
                 testURL.addPathSegment(segment);
 
             assertEquals(url.builtURL,testURL.toString(), "URL building error without encoding.");
-            assertEquals(url.builtURLEncoded, testURL.toString(true),"URL building error with encoding");
         }
     }
 
@@ -132,7 +130,6 @@ public class FileURLTest {
         int port;
         List<String> pathSegments;
         String builtURL;
-        String builtURLEncoded;
 
         URL(){
             this.port = -1;

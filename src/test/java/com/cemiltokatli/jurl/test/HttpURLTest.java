@@ -98,7 +98,6 @@ public class HttpURLTest {
 
                 //Excepted
                 url.builtURL = item.getString("builtURL");
-                url.builtURLEncoded = item.getString("builtURLEncoded");
 
                 //Structure
                 if(item.has("structure") && !item.isNull("structure")) {
@@ -124,7 +123,7 @@ public class HttpURLTest {
     }
 
     /**
-     * Tests the toString methods of the HttpURL class with and without encoding the URL.
+     * Tests the toString methods of the HttpURL class without encoding the URL.
      */
     @Test
     @DisplayName("Test URL Building")
@@ -145,9 +144,7 @@ public class HttpURLTest {
 
             testURL.setFragment(url.fragment);
 
-            assertEquals(url.builtURL,testURL.toString(), "URL building error without encoding.");
-            assertEquals(url.builtURLEncoded, testURL.toString(true),"URL building error with encoding");
-        }
+            assertEquals(url.builtURL,testURL.toString(), "URL building error without encoding."); }
     }
 
     /**
@@ -180,7 +177,6 @@ public class HttpURLTest {
                 testURL.setFragment(url.fragment);
 
             assertEquals(url.builtURL,testURL.toString(), "URL building error without encoding.");
-            assertEquals(url.builtURLEncoded, testURL.toString(true),"URL building error with encoding");
         }
     }
 
@@ -198,7 +194,6 @@ public class HttpURLTest {
         String fragment;
         String structure;
         String builtURL;
-        String builtURLEncoded;
 
         URL(){
             this.port = -1;

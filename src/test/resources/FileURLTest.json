@@ -1,60 +1,60 @@
 {"data": [
     {"protocol":"ftp://","host":"test.domain.com","port":21,"username":"user1","password":null,"path":[],
-      "builtURL":"ftp://user1@test.domain.com:21", "builtURLEncoded":"ftp://user1@test.domain.com:21"
+      "builtURL":"ftp://user1@test.domain.com:21"
     },
     {"protocol":"ftps://","host":"domain.com","port":22,"username":"user1","password":"kOm21@9012_Rw@AA","path":[],
-      "builtURL":"ftps://user1:kOm21@9012_Rw@AA@domain.com:22", "builtURLEncoded":"ftps://user1:kOm21%409012_Rw%40AA@domain.com:22"
+      "builtURL":"ftps://user1:kOm21@9012_Rw@AA@domain.com:22"
     },
     {"protocol":"sftp://","host":"domain.com.tr","port":-1,"username":"user1","password":"pass1","path":[],
-    "builtURL":"sftp://user1:pass1@domain.com.tr", "builtURLEncoded":"sftp://user1:pass1@domain.com.tr"
+    "builtURL":"sftp://user1:pass1@domain.com.tr"
     },
     {"protocol":"file://","host":"foo.bar","port":-1,"username":"user1","password":"k @131$1-..Foo4Bar","path":["foo","bar"],
-      "builtURL":"file://user1:k @131$1-..Foo4Bar@foo.bar/foo/bar/", "builtURLEncoded":"file://user1:k%20%40131%241-..Foo4Bar@foo.bar/foo/bar/"
+      "builtURL":"file://user1:k @131$1-..Foo4Bar@foo.bar/foo/bar/"
     },
     {"protocol":"file://","host":"domain.org","port":-1,"username":"user1","password":"k @131$1-..Foo4Bar","path":["foo","bar"],
-      "builtURL":"file://user1:k @131$1-..Foo4Bar@domain.org/foo/bar/", "builtURLEncoded":"file://user1:k%20%40131%241-..Foo4Bar@domain.org/foo/bar/"
+      "builtURL":"file://user1:k @131$1-..Foo4Bar@domain.org/foo/bar/"
     },
     {"protocol":"file://","host":"domain.net","port":-1,"username":"user1","password":"Op@212Foreas","path":["foo","bar"],
-      "builtURL":"file://user1:Op@212Foreas@domain.net/foo/bar/", "builtURLEncoded":"file://user1:Op%40212Foreas@domain.net/foo/bar/"
+      "builtURL":"file://user1:Op@212Foreas@domain.net/foo/bar/"
     },
     {"protocol":"file://","host":"domain.net.tr","port":-1,"username":null,"password":null,"path":["foo","bar","index.html"],
-      "builtURL":"file://domain.net.tr/foo/bar/index.html", "builtURLEncoded":"file://domain.net.tr/foo/bar/index.html"
+      "builtURL":"file://domain.net.tr/foo/bar/index.html"
     },
     {"protocol":"ftp://","host":"domain.net","port":-1,"username":null,"password":null,"path":["foo","bar","test.jpg"],
-    "builtURL":"ftp://domain.net/foo/bar/test.jpg", "builtURLEncoded":"ftp://domain.net/foo/bar/test.jpg"
+    "builtURL":"ftp://domain.net/foo/bar/test.jpg"
     },
     {"protocol":"ftp://","host":"100.200.300.400","port":20,"username":"user","password":"password","path":["foo","bar","test.jpg"],
-      "builtURL":"ftp://user:password@100.200.300.400:20/foo/bar/test.jpg", "builtURLEncoded":"ftp://user:password@100.200.300.400:20/foo/bar/test.jpg"
+      "builtURL":"ftp://user:password@100.200.300.400:20/foo/bar/test.jpg"
     },
     {"protocol":"ftp://","host":"100.200.300.400","port":20,"username":"user","password":"password","path":["foo","bar","test.jpg"],
-      "builtURL":"ftp://user:password@100.200.300.400:20/foo/bar/test.jpg", "builtURLEncoded":"ftp://user:password@100.200.300.400:20/foo/bar/test.jpg"
+      "builtURL":"ftp://user:password@100.200.300.400:20/foo/bar/test.jpg"
     },
     {"protocol":"ftps://","host":"100.200.300.400","port":-1,"username":"user","password":"password","path":["test.jpg"],
-      "builtURL":"ftps://user:password@100.200.300.400/test.jpg", "builtURLEncoded":"ftps://user:password@100.200.300.400/test.jpg"
+      "builtURL":"ftps://user:password@100.200.300.400/test.jpg"
     },
     {"protocol":"file://","host":"mytest.com.tr","port":-1,"username":"user","password":"password","path":[],
-      "builtURL":"file://user:password@mytest.com.tr", "builtURLEncoded":"file://user:password@mytest.com.tr"
+      "builtURL":"file://user:password@mytest.com.tr"
     },
     {"protocol":"ftp://","host":"mytest.com.tr","port":21,"username":"user","password":"password","path":[],
-      "builtURL":"ftp://user:password@mytest.com.tr:21", "builtURLEncoded":"ftp://user:password@mytest.com.tr:21"
+      "builtURL":"ftp://user:password@mytest.com.tr:21"
     },
     {"protocol":"ftp://","host":"mytest.io","port":21,"username":"user","password":null,"path":[],
-      "builtURL":"ftp://user@mytest.io:21", "builtURLEncoded":"ftp://user@mytest.io:21"
+      "builtURL":"ftp://user@mytest.io:21"
     },
     {"protocol":"ftp://","host":"ftp://mytest.co","port":21,"username":"user","password":null,"path":[],
-      "builtURL":"ftp://user@mytest.co:21", "builtURLEncoded":"ftp://user@mytest.co:21"
+      "builtURL":"ftp://user@mytest.co:21"
     },
     {"protocol":"ftp://","host":"ftp://mydomain.com.tr/","port":-1,"username":"user","password":null,"path":["foo","bar"],
-      "builtURL":"ftp://user@mydomain.com.tr/foo/bar/", "builtURLEncoded":"ftp://user@mydomain.com.tr/foo/bar/"
+      "builtURL":"ftp://user@mydomain.com.tr/foo/bar/"
     },
     {"protocol":"ftp://","host":"/100.200.300/","port":40,"username":"user","password":"pass","path":[],
-      "builtURL":"ftp://user:pass@100.200.300:40", "builtURLEncoded":"ftp://user:pass@100.200.300:40"
+      "builtURL":"ftp://user:pass@100.200.300:40"
     },
     {"protocol":"sftp://","host":"100.200.300","port":999,"username":"user","password":null,"path":["java","index.jsp"],
-      "builtURL":"sftp://user@100.200.300:999/java/index.jsp", "builtURLEncoded":"sftp://user@100.200.300:999/java/index.jsp"
+      "builtURL":"sftp://user@100.200.300:999/java/index.jsp"
     },
     {"protocol":"ftp://","host":"/100.200.300/","port":40,"username":"user","password":"pass","path":["file test"],
-      "builtURL":"ftp://user:pass@100.200.300:40/file test/", "builtURLEncoded":"ftp://user:pass@100.200.300:40/file%20test/"
+      "builtURL":"ftp://user:pass@100.200.300:40/file test/"
     }
   ]
 }

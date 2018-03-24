@@ -5,24 +5,21 @@
       "password": "pass1",
       "host": "domain.com",
       "port": -1,
-      "builtURL": "telnet://user1:pass1@domain.com",
-      "builtURLEncoded": "telnet://user1:pass1@domain.com"
+      "builtURL": "telnet://user1:pass1@domain.com"
     },
     {
       "username": "user1",
       "password": "pass1",
       "host": "domain.com",
       "port": 20,
-      "builtURL": "telnet://user1:pass1@domain.com:20",
-      "builtURLEncoded": "telnet://user1:pass1@domain.com:20"
+      "builtURL": "telnet://user1:pass1@domain.com:20"
     },
     {
       "username": "user1",
       "password": "pass test",
       "host": "domain.com",
       "port": 20,
-      "builtURL": "telnet://user1:pass test@domain.com:20",
-      "builtURLEncoded": "telnet://user1:pass%20test@domain.com:20"
+      "builtURL": "telnet://user1:pass test@domain.com:20"
     }
   ]
 }

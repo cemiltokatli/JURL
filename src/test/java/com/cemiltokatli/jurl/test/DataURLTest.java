@@ -68,7 +68,6 @@ public class DataURLTest {
 
                 //Excepted
                 url.builtURL = item.getString("builtURL");
-                url.builtURLEncoded = item.getString("builtURLEncoded");
 
                 source.add(url);
             }
@@ -97,7 +96,6 @@ public class DataURLTest {
             testURL.setData(url.data);
 
             assertEquals(url.builtURL,testURL.toString(), "URL building error without encoding.");
-            assertEquals(url.builtURLEncoded, testURL.toString(true),"URL building error with encoding");
         }
     }
 
@@ -109,6 +107,5 @@ public class DataURLTest {
         boolean base64;
         String data;
         String builtURL;
-        String builtURLEncoded;
     }
 }

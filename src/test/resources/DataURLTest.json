@@ -1,27 +1,27 @@
 {"data": [
   {"mediaType":"", "base64":false, "data":"Hello World!",
-   "builtURL":"data:,Hello World!", "builtURLEncoded":"data:,Hello%20World!"
+   "builtURL":"data:,Hello World!"
   },
   {"mediaType":"text/plain", "base64":true, "data":"Hello World!",
-    "builtURL":"data:text/plain;base64,SGVsbG8gV29ybGQh", "builtURLEncoded":"data:text/plain;base64,SGVsbG8gV29ybGQh"
+    "builtURL":"data:text/plain;base64,SGVsbG8gV29ybGQh"
   },
   {"mediaType":"text/html", "base64":true, "data":"<b>Java is nice</b>",
-    "builtURL":"data:text/html;base64,PGI+SmF2YSBpcyBuaWNlPC9iPg==", "builtURLEncoded":"data:text/html;base64,PGI+SmF2YSBpcyBuaWNlPC9iPg=="
+    "builtURL":"data:text/html;base64,PGI+SmF2YSBpcyBuaWNlPC9iPg=="
   },
   {"mediaType":"text/html", "base64":false, "data":"<i>Java is nice</i>",
-    "builtURL":"data:text/html,<i>Java is nice</i>", "builtURLEncoded":"data:text/html,%3Ci%3EJava%20is%20nice%3C%2Fi%3E"
+    "builtURL":"data:text/html,<i>Java is nice</i>"
   },
   {"mediaType":"text/html", "base64":false, "data":"<script>alert('hi');</script>",
-    "builtURL":"data:text/html,<script>alert('hi');</script>", "builtURLEncoded":"data:text/html,%3Cscript%3Ealert('hi')%3B%3C%2Fscript%3E"
+    "builtURL":"data:text/html,<script>alert('hi');</script>"
   },
   {"mediaType":"text/html", "base64":false, "data":"<h1>Hello, World!</h1>",
-    "builtURL":"data:text/html,<h1>Hello, World!</h1>", "builtURLEncoded":"data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E"
+    "builtURL":"data:text/html,<h1>Hello, World!</h1>"
   },
   {"mediaType":"", "base64":false, "data":"<i>foo</i>",
-    "builtURL":"data:,<i>foo</i>", "builtURLEncoded":"data:,%3Ci%3Efoo%3C%2Fi%3E"
+    "builtURL":"data:,<i>foo</i>"
   },
   {"mediaType":"text/html", "base64":true, "data":"<i>bar</i>",
-    "builtURL":"data:text/html;base64,PGk+YmFyPC9pPg==", "builtURLEncoded":"data:text/html;base64,PGk+YmFyPC9pPg=="
+    "builtURL":"data:text/html;base64,PGk+YmFyPC9pPg=="
   }
   ]
 }

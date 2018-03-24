@@ -4,43 +4,37 @@
       "mail":"test@email.com",
       "subject":"test1",
       "content":"test2",
-      "builtURL":"mailto:test@email.com?subject=test1&body=test2",
-      "builtURLEncoded":"mailto:test@email.com?subject=test1&body=test2"
+      "builtURL":"mailto:test@email.com?subject=test1&body=test2"
     },
     {
       "mail":"test@email.com",
       "subject":"test 1",
       "content":"test 2",
-      "builtURL":"mailto:test@email.com?subject=test 1&body=test 2",
-      "builtURLEncoded":"mailto:test@email.com?subject=test%201&body=test%202"
+      "builtURL":"mailto:test@email.com?subject=test 1&body=test 2"
     },
     {
       "mail":"test@yahoo.com",
       "subject":"",
       "content":"",
-      "builtURL":"mailto:test@yahoo.com",
-      "builtURLEncoded":"mailto:test@yahoo.com"
+      "builtURL":"mailto:test@yahoo.com"
     },
     {
       "mail":"test@gmail.com",
       "subject":"",
       "content":"test test",
-      "builtURL":"mailto:test@gmail.com?body=test test",
-      "builtURLEncoded":"mailto:test@gmail.com?body=test%20test"
+      "builtURL":"mailto:test@gmail.com?body=test test"
     },
     {
       "mail":"test@yahoo.com",
       "subject":"test",
       "content":"",
-      "builtURL":"mailto:test@yahoo.com?subject=test",
-      "builtURLEncoded":"mailto:test@yahoo.com?subject=test"
+      "builtURL":"mailto:test@yahoo.com?subject=test"
     },
     {
       "mail":"test@outlook.com",
       "subject":"test test",
       "content":"",
-      "builtURL":"mailto:test@outlook.com?subject=test test",
-      "builtURLEncoded":"mailto:test@outlook.com?subject=test%20test"
+      "builtURL":"mailto:test@outlook.com?subject=test test"
     }
   ]
 }

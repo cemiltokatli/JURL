@@ -1,124 +1,124 @@
 {"data":[
   {"protocol":"http://","host":"domain.com","port":-1,"shownWWW":false,"routeParameters":[],"queryFields":null,"fragment":null,
-    "builtURL":"http://domain.com","builtURLEncoded":"http://domain.com"},
+    "builtURL":"http://domain.com"},
 
   {"protocol":"http://","host":"www.domain.com","port":-1,"shownWWW":true,"routeParameters":["page","book","java"],"queryFields":null,"fragment":null,
-    "builtURL":"http://www.domain.com/page/book/java/","builtURLEncoded":"http://www.domain.com/page/book/java/"},
+    "builtURL":"http://www.domain.com/page/book/java/"},
 
   {"protocol":"http://","host":"domain.net","port":-1,"shownWWW":false,"routeParameters":["country","usa","new-york"],"queryFields":["id","100","page","2"],"fragment":null,
-    "builtURL":"http://domain.net/country/usa/new-york/?id=100&page=2","builtURLEncoded":"http://domain.net/country/usa/new-york/?id=100&page=2"},
+    "builtURL":"http://domain.net/country/usa/new-york/?id=100&page=2"},
 
   {"protocol":"https://","host":"www.domain.org","port":-1,"shownWWW":true,"routeParameters":[],"queryFields":["lang","en","foo","bar","id","100"],"fragment":"test.test",
-    "builtURL":"https://www.domain.org/?lang=en&foo=bar&id=100#test.test","builtURLEncoded":"https://www.domain.org/?lang=en&foo=bar&id=100#test.test"},
+    "builtURL":"https://www.domain.org/?lang=en&foo=bar&id=100#test.test"},
 
   {"protocol":"https://","host":"www.domain.org","port":-1,"shownWWW":true,"routeParameters":["aaa","bbb","ccc","ddd","index.asp"],"queryFields":null,"fragment":null,
-    "builtURL":"https://www.domain.org/aaa/bbb/ccc/ddd/index.asp","builtURLEncoded":"https://www.domain.org/aaa/bbb/ccc/ddd/index.asp"},
+    "builtURL":"https://www.domain.org/aaa/bbb/ccc/ddd/index.asp"},
 
   {"protocol":"http://","host":"112.138.22.100","port":-1,"shownWWW":false,"routeParameters":[],"queryFields":null,"fragment":null,
-    "builtURL":"http://112.138.22.100","builtURLEncoded":"http://112.138.22.100"},
+    "builtURL":"http://112.138.22.100"},
 
   {"protocol":"http://","host":"112.138.22.100","port":23,"shownWWW":false,"routeParameters":[],"queryFields":["foo","bar"],"fragment":null,
-    "builtURL":"http://112.138.22.100:23/?foo=bar","builtURLEncoded":"http://112.138.22.100:23/?foo=bar"},
+    "builtURL":"http://112.138.22.100:23/?foo=bar"},
 
   {"protocol":"https://","host":"subdomain.domain.com","port":-1,"shownWWW":false,"routeParameters":["page","category 1","test page.html"],"queryFields":null,"fragment":"foo bar",
-    "builtURL":"https://subdomain.domain.com/page/category 1/test page.html#foo bar","builtURLEncoded":"https://subdomain.domain.com/page/category%201/test%20page.html#foo%20bar"},
+    "builtURL":"https://subdomain.domain.com/page/category 1/test page.html#foo bar"},
 
   {"protocol":"https://","host":"domain.com","port":-1,"shownWWW":false,"routeParameters":["my'test","foo","bar","foo$bar","default.asp"],"queryFields":["page","Hello Java"],"fragment":null,
-    "builtURL":"https://domain.com/my'test/foo/bar/foo$bar/default.asp?page=Hello Java","builtURLEncoded":"https://domain.com/my'test/foo/bar/foo%24bar/default.asp?page=Hello%20Java"},
+    "builtURL":"https://domain.com/my'test/foo/bar/foo$bar/default.asp?page=Hello Java"},
 
   {"protocol":"http://","host":"www.mydomain.net","port":-1,"shownWWW":true,"routeParameters":["page","sub-page","category","test-page","my file.php"],"queryFields":["p","1","l","en","t","1","foo","bar"],"fragment":"anchor link",
-    "builtURL":"http://www.mydomain.net/page/sub-page/category/test-page/my file.php?p=1&l=en&t=1&foo=bar#anchor link","builtURLEncoded":"http://www.mydomain.net/page/sub-page/category/test-page/my%20file.php?p=1&l=en&t=1&foo=bar#anchor%20link"},
+    "builtURL":"http://www.mydomain.net/page/sub-page/category/test-page/my file.php?p=1&l=en&t=1&foo=bar#anchor link"},
 
   {"protocol":"https://","host":"100.200.30.10","port":23,"shownWWW":false,"routeParameters":["foo","bar","java","test","app","file.jsp"],"queryFields":["do","foo"],"fragment":null,
-    "builtURL":"https://100.200.30.10:23/foo/bar/java/test/app/file.jsp?do=foo","builtURLEncoded":"https://100.200.30.10:23/foo/bar/java/test/app/file.jsp?do=foo"},
+    "builtURL":"https://100.200.30.10:23/foo/bar/java/test/app/file.jsp?do=foo"},
 
   {"protocol":"https://","host":"en.mysite.com","port":-1,"shownWWW":false,"routeParameters":[],"queryFields":null,"fragment":"foo",
-    "builtURL":"https://en.mysite.com/#foo","builtURLEncoded":"https://en.mysite.com/#foo"},
+    "builtURL":"https://en.mysite.com/#foo"},
 
   {"protocol":"http://","host":"www.hellojava.com","port":-1,"shownWWW":true,"routeParameters":[],"queryFields":null,"fragment":"link test",
-    "builtURL":"http://www.hellojava.com/#link test","builtURLEncoded":"http://www.hellojava.com/#link%20test"},
+    "builtURL":"http://www.hellojava.com/#link test"},
 
   {"protocol":"http://","host":"www.domain.com","port":-1,"shownWWW":true,"routeParameters":["test.jsp"],"queryFields":null,"fragment":"anchor test 1",
-    "builtURL":"http://www.domain.com/test.jsp#anchor test 1","builtURLEncoded":"http://www.domain.com/test.jsp#anchor%20test%201"},
+    "builtURL":"http://www.domain.com/test.jsp#anchor test 1"},
 
   {"protocol":"https://","host":"www.testdomain.com","port":-1,"shownWWW":true,"routeParameters":["java","test","index-file.jsp"], "queryFields":["foo","bar"],"fragment":null,
-    "builtURL":"https://www.testdomain.com/java/test/index-file.jsp?foo=bar","builtURLEncoded":"https://www.testdomain.com/java/test/index-file.jsp?foo=bar"},
+    "builtURL":"https://www.testdomain.com/java/test/index-file.jsp?foo=bar"},
 
   {"protocol":"http://","host":"100.200.300.400","port":8080,"shownWWW":false,"routeParameters":[],"queryFields":["test","100"],"fragment":null,
-    "builtURL":"http://100.200.300.400:8080/?test=100","builtURLEncoded":"http://100.200.300.400:8080/?test=100"},
+    "builtURL":"http://100.200.300.400:8080/?test=100"},
 
   {"protocol":"https://","host":"testdomain.org.tr","port":-1,"shownWWW":false,"routeParameters":[],"queryFields":null,"fragment":"hello java",
-    "builtURL":"https://testdomain.org.tr/#hello java","builtURLEncoded":"https://testdomain.org.tr/#hello%20java"},
+    "builtURL":"https://testdomain.org.tr/#hello java"},
 
   {"protocol":"https://","host":"www.mydomain.com.tr","port":-1,"shownWWW":true,"routeParameters":["a1","a2","a3","a4","b 1","b 2","b 3"],"queryFields":["foo","bar","id","100"],"fragment":"anchor test",
-    "builtURL":"https://www.mydomain.com.tr/a1/a2/a3/a4/b 1/b 2/b 3/?foo=bar&id=100#anchor test","builtURLEncoded":"https://www.mydomain.com.tr/a1/a2/a3/a4/b%201/b%202/b%203/?foo=bar&id=100#anchor%20test"},
+    "builtURL":"https://www.mydomain.com.tr/a1/a2/a3/a4/b 1/b 2/b 3/?foo=bar&id=100#anchor test"},
 
   {"protocol":"http://","host":"www.test.com","port":-1,"shownWWW":true,"routeParameters":["index.html"],"queryFields":null,"fragment":null,
-    "builtURL":"http://www.test.com/index.html","builtURLEncoded":"http://www.test.com/index.html"},
+    "builtURL":"http://www.test.com/index.html"},
 
   {"protocol":"https://","host":"www.domain.com","port":-1,"shownWWW":true,"routeParameters":["a1","a2","a3"],"queryFields":null,"fragment":"foo bar",
-    "builtURL":"https://www.domain.com/a1/a2/a3/#foo bar","builtURLEncoded":"https://www.domain.com/a1/a2/a3/#foo%20bar"},
+    "builtURL":"https://www.domain.com/a1/a2/a3/#foo bar"},
 
   {"protocol":"http://","host":"10.20.30.40","port":-1,"shownWWW":false,"routeParameters":[],"queryFields":null,"fragment":null,
-    "builtURL":"http://10.20.30.40","builtURLEncoded":"http://10.20.30.40"},
+    "builtURL":"http://10.20.30.40"},
 
   {"protocol":"http://","host":"10.20.30.40","port":999,"shownWWW":false,"routeParameters":[],"queryFields":null,"fragment":null,
-    "builtURL":"http://10.20.30.40:999","builtURLEncoded":"http://10.20.30.40:999"},
+    "builtURL":"http://10.20.30.40:999"},
 
   {"protocol":"https://","host":"www.domain.org.tr","port":-1,"shownWWW":true,"routeParameters":[],"queryFields":null,"fragment":null,
-    "builtURL":"https://www.domain.org.tr","builtURLEncoded":"https://www.domain.org.tr"},
+    "builtURL":"https://www.domain.org.tr"},
 
   {"protocol":"http://","host":"www.testdomain.org","port":-1,"shownWWW":true,"routeParameters":[],"queryFields":null,"fragment":null,
-    "builtURL":"http://www.testdomain.org","builtURLEncoded":"http://www.testdomain.org"},
+    "builtURL":"http://www.testdomain.org"},
 
   {"protocol":"https://","host":"www.foo.bar","port":-1,"shownWWW":true,"routeParameters":[],"queryFields":null,"fragment":null,
-    "builtURL":"https://www.foo.bar","builtURLEncoded":"https://www.foo.bar"},
+    "builtURL":"https://www.foo.bar"},
 
   {"protocol":"https://","host":"mydomain.io","port":-1,"shownWWW":false,"routeParameters":[],"queryFields":null,"fragment":null,
-    "builtURL":"https://mydomain.io","builtURLEncoded":"https://mydomain.io"},
+    "builtURL":"https://mydomain.io"},
 
   {"protocol":"https://","host":"www.mydomain.co","port":-1,"shownWWW":true,"routeParameters":[],"queryFields":null,"fragment":"my-test",
-    "builtURL":"https://www.mydomain.co/#my-test","builtURLEncoded":"https://www.mydomain.co/#my-test"},
+    "builtURL":"https://www.mydomain.co/#my-test"},
 
   {"protocol":"http://","host":"www.mydomain.io","port":-1,"shownWWW":true,"routeParameters":["software","programing","java","foo","bar"],"queryFields":null,"fragment":"my-test",
-    "builtURL":"http://www.mydomain.io/software/programing/java/foo/bar/#my-test","builtURLEncoded":"http://www.mydomain.io/software/programing/java/foo/bar/#my-test"},
+    "builtURL":"http://www.mydomain.io/software/programing/java/foo/bar/#my-test"},
 
   {"protocol":"http://","host":"www.mydomain.io","port":-1,"shownWWW":true,"routeParameters":["software","programing","java","foo","bar","index.jsf"],"queryFields":null,"fragment":"my-test",
-    "builtURL":"http://www.mydomain.io/software/programing/java/foo/bar/index.jsf#my-test","builtURLEncoded":"http://www.mydomain.io/software/programing/java/foo/bar/index.jsf#my-test"},
+    "builtURL":"http://www.mydomain.io/software/programing/java/foo/bar/index.jsf#my-test"},
 
   {"protocol":"http://","host":"www.mydomain.io","port":-1,"shownWWW":true,"routeParameters":["software","programing","java","foo","bar","index.jsf"],"queryFields":["id","100"],"fragment":"my-test",
-    "builtURL":"http://www.mydomain.io/software/programing/java/foo/bar/index.jsf?id=100#my-test","builtURLEncoded":"http://www.mydomain.io/software/programing/java/foo/bar/index.jsf?id=100#my-test"},
+    "builtURL":"http://www.mydomain.io/software/programing/java/foo/bar/index.jsf?id=100#my-test"},
 
   {"protocol":"http://","host":"www.mydomain.com.tr","port":-1,"shownWWW":true,"routeParameters":["foo & bar","(test data)","(foo ^ bar)","{foo * bar}"],"queryFields":[],"fragment":null,
-    "builtURL":"http://www.mydomain.com.tr/foo & bar/(test data)/(foo ^ bar)/{foo * bar}/","builtURLEncoded":"http://www.mydomain.com.tr/foo%20&%20bar/(test%20data)/(foo%20%5E%20bar)/%7Bfoo%20*%20bar%7D/"},
+    "builtURL":"http://www.mydomain.com.tr/foo & bar/(test data)/(foo ^ bar)/{foo * bar}/"},
 
   {"protocol":"http://","host":"mydomain.co.uk","port":-1,"shownWWW":false,"routeParameters":[],"queryFields":[],"fragment":null,
-    "builtURL":"http://mydomain.co.uk","builtURLEncoded":"http://mydomain.co.uk"},
+    "builtURL":"http://mydomain.co.uk"},
 
   {"protocol":"http://","host":"www.mydomain.co.uk","port":-1,"shownWWW":true,"routeParameters":["!foo bar "," java is nice","junit-is-nice","(Programing)","\"Java\"","[test]"],"queryFields":[],"fragment":null,
-    "builtURL":"http://www.mydomain.co.uk/!foo bar / java is nice/junit-is-nice/(Programing)/\"Java\"/[test]/","builtURLEncoded":"http://www.mydomain.co.uk/!foo%20bar%20/%20java%20is%20nice/junit-is-nice/(Programing)/%22Java%22/[test]/"},
+    "builtURL":"http://www.mydomain.co.uk/!foo bar / java is nice/junit-is-nice/(Programing)/\"Java\"/[test]/"},
 
   {"protocol":"https://","host":"mydomain.net.tr","port":-1,"shownWWW":false,"routeParameters":["my test route1","route test 2","test file.php","test file-2.php"],"queryFields":["foo","bar"],"fragment":null,
-    "builtURL":"https://mydomain.net.tr/my test route1/route test 2/test file.php/test file-2.php?foo=bar","builtURLEncoded":"https://mydomain.net.tr/my%20test%20route1/route%20test%202/test%20file.php/test%20file-2.php?foo=bar"},
+    "builtURL":"https://mydomain.net.tr/my test route1/route test 2/test file.php/test file-2.php?foo=bar"},
 
   {"protocol":"https://","host":"testdomain.com.tr","port":-1,"shownWWW":false,"routeParameters":["a","b","c","d","e","f","g","h","index.php"],"queryFields":["foo","bar","page","1","id","10","ref","java"],"fragment":null,
-    "builtURL":"https://testdomain.com.tr/a/b/c/d/e/f/g/h/index.php?foo=bar&page=1&id=10&ref=java","builtURLEncoded":"https://testdomain.com.tr/a/b/c/d/e/f/g/h/index.php?foo=bar&page=1&id=10&ref=java"},
+    "builtURL":"https://testdomain.com.tr/a/b/c/d/e/f/g/h/index.php?foo=bar&page=1&id=10&ref=java"},
 
   {"protocol":"http://","host":"12.10.222.32","port":22,"shownWWW":false,"routeParameters":["a","b","c","default.asp"],"queryFields":["a","b"],"fragment":"foo.bar",
-    "builtURL":"http://12.10.222.32:22/a/b/c/default.asp?a=b#foo.bar","builtURLEncoded":"http://12.10.222.32:22/a/b/c/default.asp?a=b#foo.bar"},
+    "builtURL":"http://12.10.222.32:22/a/b/c/default.asp?a=b#foo.bar"},
 
   {"protocol":"http://","host":"22.13.444.32","port":-1,"shownWWW":false,"routeParameters":[],"queryFields":null,"fragment":"foo.bar",
-    "builtURL":"http://22.13.444.32/#foo.bar","builtURLEncoded":"http://22.13.444.32/#foo.bar"},
+    "builtURL":"http://22.13.444.32/#foo.bar"},
 
   {"protocol":"https://","host":"https://www.test.com.tr","port":-1,"shownWWW":true,"routeParameters":["foo","bar","java"],"queryFields":null,"fragment":"java is nice",
-    "builtURL":"https://www.test.com.tr/foo/bar/java/#java is nice","builtURLEncoded":"https://www.test.com.tr/foo/bar/java/#java%20is%20nice"},
+    "builtURL":"https://www.test.com.tr/foo/bar/java/#java is nice"},
 
   {"protocol":"http://","host":"http://100.200.300.400","port":-1,"shownWWW":false,"routeParameters":["test"],"queryFields":["java","true"],"fragment":null,
-    "builtURL":"http://100.200.300.400/test/?java=true","builtURLEncoded":"http://100.200.300.400/test/?java=true"},
+    "builtURL":"http://100.200.300.400/test/?java=true"},
 
   {"protocol":"https://","host":"https://www.foo.com","port":-1,"shownWWW":true,"routeParameters":["index.php"],"queryFields":null,"fragment":null,
-    "builtURL":"https://www.foo.com/index.php","builtURLEncoded":"https://www.foo.com/index.php"},
+    "builtURL":"https://www.foo.com/index.php"},
 
   {"protocol":"https://","host":"https://www.foo.com","port":-1,"shownWWW":true,"routeParameters":["foo/bar/java","index.php"],"queryFields":null,"fragment":null,
-    "builtURL":"https://www.foo.com/foo/bar/java/index.php","builtURLEncoded":"https://www.foo.com/foo/bar/java/index.php"}
+    "builtURL":"https://www.foo.com/foo/bar/java/index.php"}
 ]}

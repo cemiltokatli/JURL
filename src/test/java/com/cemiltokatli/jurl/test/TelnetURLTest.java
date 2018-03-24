@@ -68,7 +68,6 @@ public class TelnetURLTest {
 
                 //Excepted
                 url.builtURL = item.getString("builtURL");
-                url.builtURLEncoded = item.getString("builtURLEncoded");
 
                 source.add(url);
             }
@@ -93,7 +92,6 @@ public class TelnetURLTest {
             testURL.setPassword(url.password);
 
             assertEquals(url.builtURL,testURL.toString(), "URL building error without encoding.");
-            assertEquals(url.builtURLEncoded, testURL.toString(true),"URL building error with encoding");
         }
     }
 
@@ -106,7 +104,6 @@ public class TelnetURLTest {
         String host;
         int port;
         String builtURL;
-        String builtURLEncoded;
 
         URL(){
             this.port = -1;
