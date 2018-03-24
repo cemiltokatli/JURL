@@ -16,7 +16,7 @@ public class DataURL extends URL {
     /**
      * Creates a new DataURL object with the given protocol.
      *
-     * @param protocol Protocol
+     * @param protocol Protocol to be set
      */
     DataURL(String protocol){
         super(protocol);
@@ -25,7 +25,7 @@ public class DataURL extends URL {
     /**
      * Returns the media-type.
      *
-     * @return Media-Type
+     * @return the media-type of the URL.
      */
     public String getMediaType(){
         return mediaType;
@@ -34,7 +34,7 @@ public class DataURL extends URL {
     /**
      * Returns the base64 status.
      *
-     * @return Base64 active or inactive
+     * @return a boolean indicating whether or not base64 encoding is enabled.
      */
     public boolean isBase64Active(){
         return base64;
@@ -43,7 +43,7 @@ public class DataURL extends URL {
     /**
      * Returns the data
      *
-     * @return Data
+     * @return the data
      */
     public String getData(){
         return data;
@@ -52,8 +52,8 @@ public class DataURL extends URL {
     /**
      * Sets the given argument as the media-type.
      *
-     * @param mediaType
-     * @return DataURL object
+     * @param mediaType Media-type of the URL.
+     * @return the DataURL object
      */
     public DataURL setMediaType(String mediaType){
         this.mediaType = mediaType;
@@ -63,8 +63,8 @@ public class DataURL extends URL {
     /**
      * Changes the status of the base64 attribute.
      *
-     * @param base64
-     * @return DataURL object
+     * @param base64 true to enable the base64 encoding option, false to disable
+     * @return the DataURL object
      */
     public DataURL setBase64(boolean base64){
         this.base64 = base64;
@@ -74,8 +74,8 @@ public class DataURL extends URL {
     /**
      * Sets the given argument as the data.
      *
-     * @param data
-     * @return DataURL object
+     * @param data the data of the URL.
+     * @return the DataURL object
      */
     public DataURL setData(String data){
         if(data != null){
@@ -88,8 +88,8 @@ public class DataURL extends URL {
      * Builds the URL and returns it as a String.
      * If the encode argument is true, it also encodes the URL.
      *
-     * @param encode
-     * @return The built URL
+     * @param encode true to encode the URL
+     * @return the built URL
      */
     public String toString(boolean encode) {
         StringBuilder url = new StringBuilder();
@@ -129,7 +129,7 @@ public class DataURL extends URL {
     /**
      * Builds the URL and returns it as a String.
      *
-     * @return The built URL
+     * @return the built URL
      */
     @Override
     public String toString(){
