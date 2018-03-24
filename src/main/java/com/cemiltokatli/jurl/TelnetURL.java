@@ -15,7 +15,7 @@ public class TelnetURL extends URL {
     /**
      * Creates a new TelnetURL object with the given protocol.
      *
-     * @param protocol Protocol
+     * @param protocol the protocol of the URL.
      */
     TelnetURL(String protocol){
         super(protocol);
@@ -25,7 +25,7 @@ public class TelnetURL extends URL {
     /**
      * Returns the username.
      *
-     * @return Username
+     * @return the user name of the URL.
      */
     public String getUsername(){
         return username;
@@ -34,7 +34,7 @@ public class TelnetURL extends URL {
     /**
      * Returns the password.
      *
-     * @return Password
+     * @return the password of the URL.
      */
     public String getPassword(){
         return password;
@@ -43,16 +43,16 @@ public class TelnetURL extends URL {
     /**
      * Returns the host name.
      *
-     * @return Host name
+     * @return the host name of the URL.
      */
     public String getHost(){
         return host;
     }
 
     /**
-     * Returns the port.
+     * Returns the port number.
      *
-     * @return Port
+     * @return the port number of the URL.
      */
     public int getPort(){
         return port;
@@ -61,8 +61,8 @@ public class TelnetURL extends URL {
     /**
      * Sets the given argument as the username.
      *
-     * @param username
-     * @return TelnetURL object
+     * @param username the user name of the URL.
+     * @return the TelnetURL object
      */
     public TelnetURL setUsername(String username){
         this.username = username;
@@ -72,8 +72,8 @@ public class TelnetURL extends URL {
     /**
      * Sets the given argument as the password.
      *
-     * @param password
-     * @return TelnetURL object
+     * @param password the password of the URL.
+     * @return the TelnetURL object
      */
     public TelnetURL setPassword(String password){
         this.password = password;
@@ -83,8 +83,8 @@ public class TelnetURL extends URL {
     /**
      * Sets the given argument as the host name.
      *
-     * @param host
-     * @return TelnetURL object
+     * @param host the host name of the URL.
+     * @return the TelnetURL object
      */
     public TelnetURL setHost(String host){
         if(host != null){
@@ -96,8 +96,8 @@ public class TelnetURL extends URL {
     /**
      * Sets the given argument as the port number.
      *
-     * @param port
-     * @return TelnetURL object
+     * @param port the port number of the URL.
+     * @return the TelnetURL object
      */
     public TelnetURL setPort(int port){
         this.port = port;
@@ -105,11 +105,11 @@ public class TelnetURL extends URL {
     }
 
     /**
-     * Builds the URL and returns it as a String.
+     * Builds the URL and returns it as a string.
      * If the encode argument is true, it also encodes the URL.
      *
-     * @param encode
-     * @return The built URL
+     * @param encode true to encode the URL.
+     * @return the built URL
      */
     public String toString(boolean encode) {
         StringBuilder url = new StringBuilder();
@@ -161,9 +161,9 @@ public class TelnetURL extends URL {
     }
 
     /**
-     * Builds the URL and returns it as a String.
+     * Builds the URL and returns it as a string.
      *
-     * @return The built URL
+     * @return the built URL
      */
     @Override
     public String toString(){
