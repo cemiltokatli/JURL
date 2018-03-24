@@ -84,6 +84,9 @@ public class TelnetURLTest {
     @DisplayName("Test URL Building")
     @SuppressWarnings("unchecked")
     public void testURLBuild(){
+        if(testData == null)
+            initAll();
+
         for(URL url : testData){
             TelnetURL testURL = JURL.build(Protocol.TELNET);
             testURL.setHost(url.host);

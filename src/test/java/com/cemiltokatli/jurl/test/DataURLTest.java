@@ -84,6 +84,9 @@ public class DataURLTest {
     @DisplayName("Test URL Building")
     @SuppressWarnings("unchecked")
     public void testURLBuild(){
+        if(testData == null)
+            initAll();
+
         for(URL url : testData){
             DataURL testURL = JURL.build(Protocol.DATA);
 

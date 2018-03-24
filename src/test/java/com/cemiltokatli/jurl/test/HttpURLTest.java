@@ -129,6 +129,9 @@ public class HttpURLTest {
     @DisplayName("Test URL Building")
     @SuppressWarnings("unchecked")
     public void testURLBuild(){
+        if(testURLBuildData == null || testURLBuildParseData == null)
+            initAll();
+
         for(URL url : testURLBuildData){
             HttpURL testURL = JURL.build(url.protocol);
             testURL.setHost(url.host);
@@ -153,6 +156,9 @@ public class HttpURLTest {
     @Test
     @DisplayName("Test URL Parsing and Building")
     public void testURLBuildWithParse() throws MalformedHttpURLException{
+        if(testURLBuildData == null || testURLBuildParseData == null)
+            initAll();
+        
         for(URL url : testURLBuildParseData){
             HttpURL testURL = JURL.build(url.protocol).setString(url.structure);
 

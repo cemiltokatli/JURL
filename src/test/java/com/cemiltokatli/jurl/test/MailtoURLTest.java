@@ -81,6 +81,9 @@ public class MailtoURLTest {
     @DisplayName("Test URL Building")
     @SuppressWarnings("unchecked")
     public void testURLBuild(){
+        if(testData == null)
+            initAll();
+
         for(URL url : testData){
             MailtoURL testURL = JURL.build(Protocol.MAILTO);
             testURL.setEmailAddress(url.emailAddress);

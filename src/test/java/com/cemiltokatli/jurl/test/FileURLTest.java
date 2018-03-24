@@ -104,6 +104,9 @@ public class FileURLTest {
     @DisplayName("Test URL Building")
     @SuppressWarnings("unchecked")
     public void testURLBuild(){
+        if(testData == null)
+            initAll();
+
         for(URL url : testData){
             FileURL testURL = JURL.build(url.protocol);
             testURL.setHost(url.host);
