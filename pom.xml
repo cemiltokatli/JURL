@@ -7,6 +7,7 @@
     <groupId>com.cemiltokatli.jurl</groupId>
     <artifactId>java-url-builder</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>JURL - Java URL Builder</name>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
