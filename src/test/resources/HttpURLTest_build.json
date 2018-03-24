@@ -120,5 +120,17 @@
     "builtURL":"https://www.foo.com/index.php"},
 
   {"protocol":"https://","host":"https://www.foo.com","port":-1,"shownWWW":true,"routeParameters":["foo/bar/java","index.php"],"queryFields":null,"fragment":null,
-    "builtURL":"https://www.foo.com/foo/bar/java/index.php"}
+    "builtURL":"https://www.foo.com/foo/bar/java/index.php"},
+
+  {"protocol":"http://","host":"http://bar.foo.com","port":-1,"shownWWW":false,"routeParameters":["foo","bar","java","index.php"],"queryFields":null,"fragment":null,
+    "builtURL":"http://bar.foo.com/foo/bar/java/index.php"},
+
+  {"protocol":"https://","host":"https://bar.foo.com","port":-1,"shownWWW":false,"routeParameters":["foo","bar","java","index.php"],"queryFields":["foo","bar","p","1"],"fragment":null,
+    "builtURL":"https://bar.foo.com/foo/bar/java/index.php?foo=bar&p=1"},
+
+  {"protocol":"https://","host":"https://www.test.com","port":-1,"shownWWW":true,"routeParameters":["index.html"],"queryFields":null,"fragment":"foo.bar",
+    "builtURL":"https://www.test.com/index.html#foo.bar"},
+
+  {"protocol":"https://","host":"https://www.test.com","port":-1,"shownWWW":true,"routeParameters":["index.html"],"queryFields":["test","a"],"fragment":"foo.bar",
+    "builtURL":"https://www.test.com/index.html?test=a#foo.bar"}
 ]}
