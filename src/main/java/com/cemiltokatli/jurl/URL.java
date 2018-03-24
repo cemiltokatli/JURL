@@ -2,6 +2,8 @@ package com.cemiltokatli.jurl;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Ancestor of the all classes that represent a URL.
@@ -34,17 +36,31 @@ abstract class URL {
      * @return Encoded value
      */
     String encode(String value){
+        return encode(value, false);
+    }
+
+    /**
+     * Encodes the given value with UTF-8 and returns it
+     * If the forHttp parameter is true, this method produces exactly the same result with the
+     * javascript's encodeURIComponent function.
+     *
+     * @param value
+     * @param forHttp
+     * @return Encoded value
+     */
+    String encode(String value, boolean forHttp){
         try{
-            return URLEncoder.encode(value, "utf-8")
-                    .replaceAll("\\+", "%20")
-                    .replaceAll("\\%26", "&")
-                    .replaceAll("\\%21", "!")
-                    .replaceAll("\\%27", "'")
-                    .replaceAll("\\%28", "(")
-                    .replaceAll("\\%29", ")")
-                    .replaceAll("\\%5B", "[")
-                    .replaceAll("\\%5D", "]")
-                    .replaceAll("\\%7E", "~");
+            String encodedValue = URLEncoder.encode(value, "utf-8");
+
+            if(forHttp){
+                Map<String, String> nonEncodedChars = Map.of("~", "%7E", "!","%21","(","%28",")","%29","\'","%27");
+                for(Map.Entry<String, String> c : nonEncodedChars.entrySet()){
+                    encodedValue = encodedValue.replaceAll(c.getValue(), c.getKey());
+                }
+            }
+            encodedValue = encodedValue.replaceAll("\\+","%20");
+
+            return encodedValue;
         }
         catch(UnsupportedEncodingException e){
             return value;
