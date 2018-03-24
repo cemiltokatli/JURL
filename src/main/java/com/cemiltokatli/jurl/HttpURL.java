@@ -24,7 +24,7 @@ public class HttpURL extends URL {
     /**
      * Creates a new HttpURL object with the given protocol.
      *
-     * @param protocol Protocol
+     * @param protocol Protocol of the URL.
      */
     HttpURL(String protocol){
         super(protocol);
@@ -36,7 +36,7 @@ public class HttpURL extends URL {
     /**
      * Returns the host name.
      *
-     * @return Host name
+     * @return the host name of the URL.
      */
     public String getHost(){
         return host;
@@ -45,24 +45,25 @@ public class HttpURL extends URL {
     /**
      * Returns the port number.
      *
-     * @return Port number
+     * @return the port number of the URL.
      */
     public int getPort(){
         return port;
     }
 
     /**
-     * Returns a boolean value indicates that if the host name starts with "www".
-     * @return Boolean
+     * Returns a boolean value indicating that if the host name starts with "www".
+     *
+     * @return a boolean indicating that if the host name starts with "www".
      */
     public boolean isWWWShown(){
         return shownWWW;
     }
 
     /**
-     * Returns the segments of the path portion of the url.
+     * Returns the segments of the path field (route parameters) of the url.
      *
-     * @return Route parameters
+     * @return the route parameters of the URL.
      */
     public List<String> getRouteParams(){
         return routeParameters;
@@ -71,16 +72,16 @@ public class HttpURL extends URL {
     /**
      * Returns the query fields.
      *
-     * @return Query fields
+     * @return the query fields of the URL.
      */
     public LinkedHashMap<String, String> getQueryFields(){
         return queryFields;
     }
 
     /**
-     * Returns the fragment portion.
+     * Returns the fragment (hash).
      *
-     * @return Fragment
+     * @return the fragment of the URL.
      */
     public String getFragment(){
         return fragment;
@@ -88,10 +89,10 @@ public class HttpURL extends URL {
 
 
     /**
-     * Sets the given value as the host of the URL.
+     * Sets the given value as the host name of the URL.
      *
-     * @param host
-     * @return HttpURL object
+     * @param host the host name
+     * @return the HttpURL object
      */
     public HttpURL setHost(String host){
         if(host != null){
@@ -102,10 +103,10 @@ public class HttpURL extends URL {
     }
 
     /**
-     * Sets the given value as the port of the URL.
+     * Sets the given value as the port number of the URL.
      *
-     * @param port
-     * @return HttpURL object
+     * @param port the port number
+     * @return the HttpURL object
      */
     public HttpURL setPort(int port){
         this.port = port;
@@ -115,8 +116,8 @@ public class HttpURL extends URL {
     /**
      * Shows or hides WWW in the beginning of the host name.
      *
-     * @param status
-     * @return HttpURL object
+     * @param status true to show, false to hide
+     * @return the HttpURL object
      */
     public HttpURL showWWW(boolean status){
         this.shownWWW = status;
@@ -124,10 +125,10 @@ public class HttpURL extends URL {
     }
 
     /**
-     * Adds a new route parameter
+     * Adds a new route parameter.
      *
-     * @param param Parameter
-     * @return HttpURL object
+     * @param param parameter to be added.
+     * @return the HttpURL object
      */
     public HttpURL addRouteParam(String param){
         if(param.contains("/")){
@@ -145,10 +146,10 @@ public class HttpURL extends URL {
     }
 
     /**
-     * Removes the given route parameter
+     * Removes the given route parameter.
      *
-     * @param param Parameter
-     * @return HttpURL object
+     * @param param parameter to be removed.
+     * @return the HttpURL object
      */
     public HttpURL removeRouteParam(String param){
         this.routeParameters.remove(param);
@@ -156,14 +157,14 @@ public class HttpURL extends URL {
     }
 
     /**
-     * It is possible to add placeholders in the URL that you send to the "fromString" method and
+     * It is possible to add placeholders in the URL that you send to the "setString" method and
      * replace these placeholders with real values later. This approach allows you to add route parameters dynamically
      * even if you are building the URL on a pre-defined structure.
      * This method allows you to replace those placeholders with real values.
      *
-     * @param name Name
-     * @param value Value
-     * @return HttpURL object
+     * @param name name of the placeholder
+     * @param value value to be replaced with the name
+     * @return the HttpURL object
      */
     public HttpURL setRouteParam(String name, String value){
         for(int i = 0; i < routeParameters.size(); i++){
@@ -178,9 +179,9 @@ public class HttpURL extends URL {
     /**
      * Adds a new query field.
      *
-     * @param name Name
-     * @param value Value
-     * @return HttpURL object
+     * @param name the name of the field.
+     * @param value the value of the field.
+     * @return the HttpURL object
      */
     public HttpURL addQueryField(String name, String value){
         this.queryFields.put(name, value);
@@ -189,8 +190,9 @@ public class HttpURL extends URL {
 
     /**
      * Removes the query field whose name is given.
-     * @param name Name
-     * @return HttpURL object
+     *
+     * @param name the name of the field to be removed.
+     * @return the HttpURL object
      */
     public HttpURL removeQueryField(String name){
         this.queryFields.remove(name);
@@ -199,8 +201,9 @@ public class HttpURL extends URL {
 
     /**
      * Sets the given value as the fragment of the URL.
-     * @param fragment
-     * @return HttpURL object
+     *
+     * @param fragment the fragment of the URL.
+     * @return the HttpURL object
      */
     public HttpURL setFragment(String fragment){
         this.fragment = fragment;
@@ -208,9 +211,9 @@ public class HttpURL extends URL {
     }
 
     /**
-     * Clears the fragment.
+     * Removes the fragment of the URL.
      *
-     * @return HttpURL object
+     * @return the HttpURL object
      */
     public HttpURL clearFragment(){
         this.fragment = null;
@@ -218,12 +221,13 @@ public class HttpURL extends URL {
     }
 
     /**
-     * Parses the given url and returns the object itself.
+     * Parses the given url.
+     * This method must be called before all of the others in this class.
      *
-     * @param url Url to be parsed
-     * @return HttpURL object
-     * @throws MalformedHttpURLException
-     * @throws HttpURLParseError
+     * @param url url to be parsed
+     * @return the HttpURL object
+     * @throws MalformedHttpURLException If the given URL is malformed.
+     * @throws HttpURLParseError If the building of the URL has already been started.
      */
     public HttpURL setString(String url) throws MalformedHttpURLException, HttpURLParseError{
         //Check if the building of the URL has been started before this method is called
@@ -291,11 +295,11 @@ public class HttpURL extends URL {
 
 
     /**
-     * Builds the URL and returns it as a String.
+     * Builds the URL and returns it as a string.
      * If the encode argument is true, it also encodes the URL.
      *
-     * @param encode
-     * @return The built URL
+     * @param encode true to encode the URL.
+     * @return the built URL
      */
     public String toString(boolean encode){
         StringBuilder url = new StringBuilder();
@@ -395,9 +399,9 @@ public class HttpURL extends URL {
     }
 
     /**
-     * Builds the URL and returns it as a String.
+     * Builds the URL and returns it as a string.
      *
-     * @return The built URL
+     * @return the built URL
      */
     @Override
     public String toString(){
@@ -408,9 +412,9 @@ public class HttpURL extends URL {
      * Builds the URL and returns it as a java.net.URL object.
      * If the encode argument is true, it also encodes the URL.
      *
-     * @param encode Encoding type
+     * @param encode true to encode the URL.
      * @return The built URL
-     * @throws java.net.MalformedURLException
+     * @throws java.net.MalformedURLException If the built URL is malformed
      */
     public java.net.URL toURL(boolean encode) throws java.net.MalformedURLException{
         return new java.net.URL(toString(encode));
@@ -419,8 +423,8 @@ public class HttpURL extends URL {
     /**
      * Builds the URL and returns it as a java.net.URL object.
      *
-     * @return The build URL
-     * @throws java.net.MalformedURLException
+     * @return the build URL
+     * @throws java.net.MalformedURLException  If the built URL is malformed
      */
     public java.net.URL toURL() throws java.net.MalformedURLException{
         return new java.net.URL(toString(false));
