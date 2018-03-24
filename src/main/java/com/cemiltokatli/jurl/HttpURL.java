@@ -333,7 +333,7 @@ public class HttpURL extends URL {
                 param = routeParameters.get(i);
 
                 if (encode)
-                    param = encode(param);
+                    param = encode(param, true);
 
 
                 if(i > 0)
@@ -370,8 +370,8 @@ public class HttpURL extends URL {
                 value = queryFields.get(key);
 
                 if(encode){
-                    key = encode(key);
-                    value = encode(value);
+                    key = encode(key, true);
+                    value = encode(value, true);
                 }
 
                 url.append(key).append("=").append(value);
@@ -383,7 +383,7 @@ public class HttpURL extends URL {
             String fragmentPrepared = fragment;
 
             if(encode)
-                fragmentPrepared = encode(fragmentPrepared);
+                fragmentPrepared = encode(fragmentPrepared, true);
 
             if(addSlash)
                 url.append("/");
