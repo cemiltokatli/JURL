@@ -1,7 +1,7 @@
 package com.cemiltokatli.jurl.exception;
 
 /**
- * Thrown to indicate that one of mandatory fields like a host name for a Http(s) URL
+ * Thrown to indicate that one of mandatory fields, like a host name for a Http(s) URL,
  * could not be found.
  */
 public class URLBuildException extends RuntimeException {
