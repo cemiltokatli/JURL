@@ -14,7 +14,7 @@ abstract class URL {
     /**
      * Creates a new URL object with the given protocol.
      *
-     * @param protocol Protocol
+     * @param protocol protocol of the URL.
      */
     URL(String protocol){
         this.protocol = protocol;
@@ -23,7 +23,7 @@ abstract class URL {
     /**
      * Returns the protocol.
      *
-     * @return Protocol
+     * @return protocol of the URL.
      */
     public String getProtocol(){
         return protocol;
@@ -32,8 +32,8 @@ abstract class URL {
     /**
      * Encodes the given value with UTF-8 and returns it.
      *
-     * @param value
-     * @return Encoded value
+     * @param value the value to be encoded.
+     * @return the encoded value.
      */
     String encode(String value){
         return encode(value, false);
@@ -41,12 +41,12 @@ abstract class URL {
 
     /**
      * Encodes the given value with UTF-8 and returns it.
-     * If the forHttp parameter is true, this method produces exactly the same result with the
+     * If the forHttp argument is true, this method produces exactly the same result with the
      * javascript's encodeURIComponent function.
      *
-     * @param value
-     * @param forHttp
-     * @return Encoded value
+     * @param value the value to be encoded
+     * @param forHttp true for Http encoding
+     * @return the encoded value
      */
     String encode(String value, boolean forHttp){
         try{

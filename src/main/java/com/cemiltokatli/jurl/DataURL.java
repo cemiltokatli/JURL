@@ -16,7 +16,7 @@ public class DataURL extends URL {
     /**
      * Creates a new DataURL object with the given protocol.
      *
-     * @param protocol Protocol to be set
+     * @param protocol Protocol of the URL
      */
     DataURL(String protocol){
         super(protocol);
@@ -50,7 +50,7 @@ public class DataURL extends URL {
     }
 
     /**
-     * Sets the given argument as the media-type.
+     * Sets the given argument as the media-type of the URL.
      *
      * @param mediaType Media-type of the URL.
      * @return the DataURL object
@@ -61,9 +61,9 @@ public class DataURL extends URL {
     }
 
     /**
-     * Changes the status of the base64 attribute.
+     * Changes the status of the base64 encoding option.
      *
-     * @param base64 true to enable the base64 encoding option, false to disable
+     * @param base64 true to enable the base64 encoding, false to disable
      * @return the DataURL object
      */
     public DataURL setBase64(boolean base64){
@@ -85,8 +85,8 @@ public class DataURL extends URL {
     }
 
     /**
-     * Builds the URL and returns it as a String.
-     * If the encode argument is true, it also encodes the URL.
+     * Builds the URL and returns it as a string.
+     * If the "encode" argument is true, it also encodes the URL.
      *
      * @param encode true to encode the URL
      * @return the built URL
@@ -127,7 +127,7 @@ public class DataURL extends URL {
     }
 
     /**
-     * Builds the URL and returns it as a String.
+     * Builds the URL and returns it as a string.
      *
      * @return the built URL
      */
