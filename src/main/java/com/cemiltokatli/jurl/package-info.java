@@ -1,3 +1,4 @@
 /**
- * Provides classes for building URL.
+ * Provides classes for building URLs.
  */
+package com.cemiltokatli.jurl;
