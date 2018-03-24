@@ -8,12 +8,12 @@ package com.cemiltokatli.jurl;
 abstract public class JURL {
     /**
      * Creates and returns a new object that represents the given protocol.
-     * The returning object is always an object of a class that derives from the URL class.
+     * The returning object is always an object of a class that is derived from the URL class.
      *
      * This method is the first step to build a URL and only way to initialize a valid URL object.
      *
-     * @param protocol Type of the protocol.
-     * @param <T>
+     * @param protocol the protocol of the URL.
+     * @param <T> type
      * @return Returns the URL object.
      */
     @SuppressWarnings("unchecked")
