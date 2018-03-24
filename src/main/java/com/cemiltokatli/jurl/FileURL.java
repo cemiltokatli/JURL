@@ -20,7 +20,7 @@ public class FileURL extends URL {
     /**
      * Creates a new HttpURL object with the given protocol.
      *
-     * @param protocol Protocol
+     * @param protocol Protocol of the URL.
      */
     FileURL(String protocol){
         super(protocol);
@@ -29,9 +29,9 @@ public class FileURL extends URL {
     }
 
     /**
-     * Returns the user name
+     * Returns the user name.
      *
-     * @return User name
+     * @return the user name.
      */
     public String getUsername() {
         return username;
@@ -40,7 +40,7 @@ public class FileURL extends URL {
     /**
      * Returns the password
      *
-     * @return Password
+     * @return the password.
      */
     public String getPassword() {
         return password;
@@ -49,7 +49,7 @@ public class FileURL extends URL {
     /**
      * Returns the host name
      *
-     * @return Host name
+     * @return the host name.
      */
     public String getHost() {
         return host;
@@ -58,7 +58,7 @@ public class FileURL extends URL {
     /**
      * Returns the port number
      *
-     * @return Port number
+     * @return the port number.
      */
     public int getPort() {
         return port;
@@ -67,8 +67,8 @@ public class FileURL extends URL {
     /**
      * Sets the given value as the username of the URL.
      *
-     * @param username
-     * @return FileURL object
+     * @param username the user name of the URL.
+     * @return the FileURL object
      */
     public FileURL setUsername(String username) {
         this.username = username;
@@ -78,8 +78,8 @@ public class FileURL extends URL {
     /**
      * Sets the given value as the password of the URL.
      *
-     * @param password
-     * @return FileURL object
+     * @param password the password of the URL.
+     * @return the FileURL object
      */
     public FileURL setPassword(String password) {
         this.password = password;
@@ -89,8 +89,8 @@ public class FileURL extends URL {
     /**
      * Sets the given value as the host name of the URL.
      *
-     * @param host
-     * @return FileURL object
+     * @param host the host name of the URL.
+     * @return the FileURL object
      */
     public FileURL setHost(String host) {
         if(host != null){
@@ -100,10 +100,10 @@ public class FileURL extends URL {
     }
 
     /**
-     * Sets the given value as the port of the URL.
+     * Sets the given value as the port number of the URL.
      *
-     * @param port
-     * @return FileURL object
+     * @param port the port number of the URL.
+     * @return the FileURL object
      */
     public FileURL setPort(int port) {
         this.port = port;
@@ -113,8 +113,8 @@ public class FileURL extends URL {
     /**
      * Adds a new segment to the path field of the URL.
      *
-     * @param segment
-     * @return FileURL object
+     * @param segment the segment to be added.
+     * @return the FileURL object
      */
     public FileURL addPathSegment(String segment){
         if(segment.contains("/")){
@@ -134,8 +134,8 @@ public class FileURL extends URL {
     /**
      * Removes the given segment from the path field of the URL.
      *
-     * @param segment
-     * @return FileURL object
+     * @param segment the segment to be removed.
+     * @return the FileURL object
      */
     public FileURL removePathSegment(String segment){
         this.pathSegments.remove(segment);
@@ -143,11 +143,11 @@ public class FileURL extends URL {
     }
 
     /**
-     * Builds the URL and returns it as a String.
+     * Builds the URL and returns it as a string.
      * If the encode argument is true, it also encodes the URL.
      *
-     * @param encode
-     * @return The built URL
+     * @param encode true to encode the URL.
+     * @return the built URL
      */
     public String toString(boolean encode){
         StringBuilder url = new StringBuilder();
@@ -222,9 +222,9 @@ public class FileURL extends URL {
     }
 
     /**
-     * Builds the URL and returns it as a String.
+     * Builds the URL and returns it as a string.
      *
-     * @return The built URL
+     * @return the built URL
      */
     @Override
     public String toString(){
