@@ -15,16 +15,16 @@ public class MailtoURL extends URL {
     /**
      * Creates a new Mail-to object with the given protocol.
      *
-     * @param protocol Protocol
+     * @param protocol the protocol of the URL.
      */
     MailtoURL(String protocol){
         super(protocol);
     }
 
     /**
-     * Returns the e-mail address.
+     * Returns the e-mail address of the URL.
      *
-     * @return E-mail address
+     * @return the receiver e-mail.
      */
     public String getEmailAddress(){
         return emailAddress;
@@ -33,7 +33,7 @@ public class MailtoURL extends URL {
     /**
      * Returns the subject.
      *
-     * @return Subject
+     * @return the subject of the e-mail to be sent.
      */
     public String getSubject(){
         return subject;
@@ -42,17 +42,17 @@ public class MailtoURL extends URL {
     /**
      * Returns the content.
      *
-     * @return Content
+     * @return the content of the e-mail to be sent.
      */
     public String getContent(){
         return content;
     }
 
     /**
-     * Sets the given argument as the e-mail address.
+     * Sets the given argument as the e-mail address of the URL.
      *
-     * @param emailAddress
-     * @return MailToURL object
+     * @param emailAddress the receiver e-mail
+     * @return the MailToURL object
      */
     public MailtoURL setEmailAddress(String emailAddress){
         this.emailAddress = emailAddress;
@@ -62,8 +62,8 @@ public class MailtoURL extends URL {
     /**
      * Sets the given argument as the subject.
      *
-     * @param subject
-     * @return MailToURL object
+     * @param subject the subject of the e-mail to be sent.
+     * @return the MailToURL object
      */
     public MailtoURL setSubject(String subject){
         this.subject = subject;
@@ -73,8 +73,8 @@ public class MailtoURL extends URL {
     /**
      * Sets the given argument as the content.
      *
-     * @param content
-     * @return MailToURL object
+     * @param content the content of the e-mail to be sent.
+     * @return the MailToURL object
      */
     public MailtoURL setContent(String content){
         this.content = content;
@@ -82,11 +82,11 @@ public class MailtoURL extends URL {
     }
 
     /**
-     * Builds the URL and returns it as a String.
+     * Builds the URL and returns it as a string.
      * If the encode argument is true, it also encodes the URL.
      *
-     * @param encode
-     * @return The built URL
+     * @param encode true to encode the URL.
+     * @return the built URL
      */
     public String toString(boolean encode){
         StringBuilder url = new StringBuilder();
@@ -127,9 +127,9 @@ public class MailtoURL extends URL {
     }
 
     /**
-     * Builds the URL and returns it as a String.
+     * Builds the URL and returns it as a string.
      *
-     * @return The built URL
+     * @return the built URL
      */
     @Override
     public String toString(){
