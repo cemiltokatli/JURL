@@ -43,7 +43,7 @@ public class DataURL extends URL {
     /**
      * Returns the data
      *
-     * @return the data
+     * @return the data of the URL.
      */
     public String getData(){
         return data;
@@ -72,7 +72,7 @@ public class DataURL extends URL {
     }
 
     /**
-     * Sets the given argument as the data.
+     * Sets the given argument as the data of the URL.
      *
      * @param data the data of the URL.
      * @return the DataURL object
