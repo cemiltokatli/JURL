@@ -1,4 +1,4 @@
-## JURL - Java URL Builder
+# JURL - Java URL Builder
 
 JURL is a Java URL builder library that allows you to create URLs with different schemes without dealing with string building or concatenation.
 
@@ -17,7 +17,7 @@ JURL supports the following schemes:
 * `mailto:`
 
 
-### Installation
+## Installation
 
 [![Bintray](https://img.shields.io/maven-central/v/io.github.cemiltokatli.jurl/java-url-builder.svg)](https://mvnrepository.com/artifact/io.github.cemiltokatli.jurl/java-url-builder)
 
@@ -29,7 +29,7 @@ The current release version is 1.3.
 * [Download **jurl-1.3-javadoc.jar** optional javadoc jar](http://cemiltokatli.com/libs/jurl/java-url-builder-1.3-javadoc.jar)
 
 
-#### Maven
+### Maven
 If you use Maven to manage the dependencies in your project, you do not need to download the jar file; just place the following code excerpt into your POM's `<dependencies>` section:
 
 ```
@@ -41,7 +41,7 @@ If you use Maven to manage the dependencies in your project, you do not need to 
 </dependency>
 ```
 
-#### Building from source
+### Building from source
 If you want to build from source, it's best to use git so that you can stay up to date, and be able to contribute your changes back:
 
 ```
@@ -50,18 +50,18 @@ cd JURL
 mvn install
 ```
 
-##### Tests
+#### Tests
 If you are building from source and make some changes, you might want to test your changes. JURL uses [JUnit](https://junit.org/junit5/) for testing and all test cases are located under the `src/test/` folder. The data prepared for testing purposes are located under the `src/test/resources` directory as [JSON](http://json.org/) files.
 
 To run tests, you can use the `mvn test`command.
 
 
-#### Dependencies
+### Dependencies
 JURL is entirely self contained and has no dependencies but for testing, it uses [JUnit](https://junit.org/junit5/) and [stleary's JSON library](https://github.com/stleary/JSON-java).
 
 JURL runs on Java 9 or up.
 
-### Usage
+## Usage
 To start building a URL, you should use the static `build` method of the `JURL` class under the `com.cemiltokatli.jurl` package.
 This method takes an argument of type `Protocol<T>`, which specifies the protocol of the URL that you want to create and returns an object of a class derived from the `URL` class.
 
@@ -80,7 +80,7 @@ DataURL myUrl6 = JURL.build(Protocol.DATA); //for data:
 `Protocol` class has a static attribute for each type of protocol. [Click here to see the reference.](http://cemiltokatli.com/libs/jurl/java-url-builder-1.3-javadoc/com/cemiltokatli/jurl/Protocol.html)
 
 
-##### HTTP URLs
+#### HTTP URLs
 An object of an `HttpURL` class represents an `http://` or `https://` URL. You can add route parameters, query fields, a host name or a fragment in the URL by using the methods of this class. [Click here to see the reference](http://cemiltokatli.com/libs/jurl/java-url-builder-1.3-javadoc/com/cemiltokatli/jurl/HttpURL.html).
 
 ```
@@ -512,7 +512,7 @@ catch(MalformedHttpURLException e){
 }
 ```
 
-##### File URLs
+#### File URLs
 An object of a `FileURL` class represents a file URL that starts with a scheme like `file://`, `ftp://`, `sftp://` or `ftps://`. You can set a user name, password or a port number and add file path in your URL. As like the others, you can start building a file URL by calling the `build` method of the `JURL` class. [Click here to see the reference](http://cemiltokatli.com/libs/jurl/java-url-builder-1.3-javadoc/com/cemiltokatli/jurl/FileURL.html).
 
 ```
@@ -578,7 +578,7 @@ System.out.println(url);
 //ftp://setusr%40domain.net:jA%24%2Bby%20-%3Fr0E%40S_-@100.200.20.300:21
 ```
 
-##### Telnet URLs
+#### Telnet URLs
 An object of a `TelnetURL` class represents a `telnet://` URL. You can start building a telnet URL by calling the static `build` method of the `JURL` class. [Click here to see the reference.](http://cemiltokatli.com/libs/jurl/java-url-builder-1.3-javadoc/com/cemiltokatli/jurl/TelnetURL.html)
 
 You can set a user name, password, host or a port number by using the setter methods. You can convert your URL to a string by using the `toString` method and encode it by calling the `toString` method with a `true` value.
@@ -594,7 +594,7 @@ System.out.println(url.toString()); //telnet://user:pass $ foo@domain.com:80
 System.out.println(url.toString(true)); //telnet://user:pass%20%24%20foo@domain.com:80
 ````
         
-##### Data URLs
+#### Data URLs
 An object of a `DataURL` class represents a URL with a `data:` prefix. You can create a data URL by using the static `build` method of the `JURL` class. [Click here to see the reference.](http://cemiltokatli.com/libs/jurl/java-url-builder-1.3-javadoc/com/cemiltokatli/jurl/DataURL.html)
 
 You can set your data and an optional media-type by using the setter methods of the class.
@@ -634,7 +634,7 @@ System.out.println(url);
 //data:text/html,%3Cb%3EHello%2C%20Java!%3C%2Fb%3E
 ```
 
-##### Mailto URLs
+#### Mailto URLs
 An object of a `MailtoURL` class represents a URL with a `mailto:` prefix. You can create a mail URL by using the static `build` method of the `JURL` class. [Click here to see the reference.](http://cemiltokatli.com/libs/jurl/java-url-builder-1.3-javadoc/com/cemiltokatli/jurl/MailtoURL.html)
 
 You can set an e-mail address by using the `setEmailAddress` method.
