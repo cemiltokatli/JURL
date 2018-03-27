@@ -19,7 +19,7 @@ JURL supports the following schemes:
 
 ## Installation
 
-[![Bintray](https://img.shields.io/maven-central/v/io.github.cemiltokatli.jurl/java-url-builder.svg)](https://mvnrepository.com/artifact/io.github.cemiltokatli.jurl/java-url-builder)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.cemiltokatli.jurl/java-url-builder.svg)](https://mvnrepository.com/artifact/io.github.cemiltokatli.jurl/java-url-builder)
 
 JRUL is available as a downloadable `.jar` java library. You can download the JAR file and directly import to your project.
 The current release version is 1.3.
