@@ -49,7 +49,7 @@ mvn install
 ```
 
 #### Tests
-If you are building from source and make some changes, you might want to test your changes. JURL uses [JUnit](https://junit.org/junit5/) for testing and all test cases are located under the `src/test/` folder. The data prepared for testing purposes are located under the `src/test/resources` directory as [JSON](http://json.org/) files.
+If you are building from source and make some changes, you might want to test your changes. JURL uses [JUnit](https://junit.org/junit5/) for testing and all test cases are located under the `src/test/` folder. The data prepared for testing purposes are located as [JSON](http://json.org/) files under the `src/test/resources` directory.
 
 To run tests, you can use the `mvn test`command.
 
